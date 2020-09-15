@@ -12,6 +12,8 @@ import com.okhttplib2.callback.Http;
 import com.okhttplib2.callback.RequestCallback;
 import com.okhttplib2.config.OkHttpConfig;
 
+import expand.ResponeInterceptor;
+
 /**
  * Create by JFZ
  * date: 2020-09-15 18:29
@@ -41,6 +43,11 @@ public class BaseApp extends Application {
                     OkHttpFactory.getInstance().obtainHandler().post(() -> Toast.makeText(BaseApp.this, "拦截失败响应,不往下执行", Toast.LENGTH_SHORT).show());
                     return false;
                 } else return true;
+            }
+        }).addInterceptor(new ResponeInterceptor() {
+            @Override
+            public void onIntercept(String url, String result) {
+
             }
         });
     }
