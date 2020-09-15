@@ -41,7 +41,8 @@ public class BaseCallback implements Callback {
                 if (builder.getLifecycle() != null && builder.getLifecycle().getCurrentState() == Lifecycle.State.DESTROYED) {
                     return;
                 }
-                uiCall.sendFailedCall(callback, -1, e);
+                if (checkResponseInterceptorErr(e))
+                    uiCall.sendFailedCall(callback, -1, e);
             }
         });
     }
@@ -77,7 +78,7 @@ public class BaseCallback implements Callback {
             info = str;
             if (success) {
                 if (callback != null && callback.mType != null && !TextUtils.isEmpty(info)) {
-                    if (checkResponseInterceptor(code,info)){
+                    if (checkResponseInterceptor(code, info)) {
                         if (callback.mType == String.class) {
                             uiCall.sendSuccessCall(callback, info);
                         } else {
@@ -104,6 +105,13 @@ public class BaseCallback implements Callback {
     private boolean checkResponseInterceptor(int code, String result) {
         if (OkHttpConfig.getInstance().getResponseInterceptor() != null) {
             return OkHttpConfig.getInstance().getResponseInterceptor().interceptorResponse(builder, uiCall, callback, code, result);
+        }
+        return true;
+    }
+
+    private boolean checkResponseInterceptorErr(Exception e) {
+        if (OkHttpConfig.getInstance().getResponseInterceptor() != null) {
+            return OkHttpConfig.getInstance().getResponseInterceptor().interceptorResponseErr(builder, uiCall, callback, e);
         }
         return true;
     }

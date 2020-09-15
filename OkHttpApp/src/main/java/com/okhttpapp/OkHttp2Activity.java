@@ -4,7 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.okhttplib2.HttpImpl;
 import com.okhttplib2.OkHttpFactory;
+import com.okhttplib2.callback.RequestCallback;
+
+import java.util.logging.Logger;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +26,18 @@ public class OkHttp2Activity extends AppCompatActivity {
     }
 
     public void syncGet(View view) {
-        OkHttpFactory.getInstance().obtainHandler().postDelayed(() -> {
-            Toast.makeText(this, "dddd", Toast.LENGTH_SHORT).show();
-        }, 1000);
+        HttpImpl.get("http://www.baidu.com")
+                .bind(this)
+                .enqueue(new RequestCallback<String>() {
+                    @Override
+                    public void onResponse(String data) {
+                        Toast.makeText(OkHttp2Activity.this, data, Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onError(int code, Exception e) {
+                        Toast.makeText(OkHttp2Activity.this, "请求失败:" + code + "," + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

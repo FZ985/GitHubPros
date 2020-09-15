@@ -118,5 +118,7 @@ public interface Http {
 
     interface ResponseInterceptor {
         boolean interceptorResponse(GETBuilder builder, UICall uiCall, RequestCallback<?> callback, int code, String result);
+
+        boolean interceptorResponseErr(GETBuilder builder, UICall uiCall, RequestCallback<?> callback, Exception e);
     }
 }

@@ -99,17 +99,7 @@ public class RequestImpl implements Http.Call, Http.UICall {
     }
 
     private void asyncCall(final Request request, final RequestCallback<?> callback) {
-        OkHttpFactory.getInstance().client().newCall(request).enqueue(new BaseCallback(builder, this, callback) {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                super.onFailure(call, e);
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                super.onResponse(call, response);
-            }
-        });
+        OkHttpFactory.getInstance().client().newCall(request).enqueue(new BaseCallback(builder, this, callback));
     }
 
     @Override
