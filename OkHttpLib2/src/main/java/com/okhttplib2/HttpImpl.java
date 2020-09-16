@@ -3,6 +3,10 @@ package com.okhttplib2;
 import com.okhttplib2.callback.Http;
 import com.okhttplib2.config.RequestBuilder;
 
+import expand.download.DownLoadBuilder3;
+import expand.download.DownLoadInfo2;
+import expand.download.DownLoadListenerAdapter;
+
 /**
  * Create by JFZ
  * date: 2020-09-15 13:47
@@ -71,5 +75,10 @@ public class HttpImpl {
 
     public static Http.Builder patchForm(String url) {
         return new RequestBuilder(url, Http.PATCH, Http.FORM);
+    }
+
+    //多文件文件下载，支持断点下载
+    public static void download3(String url, String path, String fileName, DownLoadListenerAdapter call) {
+        DownLoadBuilder3.getInstance().download(new DownLoadInfo2(url, path, fileName), call);
     }
 }

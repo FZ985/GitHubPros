@@ -5,11 +5,64 @@
     android:orientation="vertical">
 
 
-    <Button
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:onClick="syncGet"
-        android:text="同步get"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="syncGet"
+                android:text="同步get"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="asyncGet"
+                android:text="异步get"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="postParams"
+                android:text="同步postParams"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="postAsyncParams"
+                android:text="异步postParams"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="postAsyncJson"
+                android:text="异步postJson"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="download"
+                android:text="download"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="put、delete、head、patch等请求不在展示，方式和get、post一样" />
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>
