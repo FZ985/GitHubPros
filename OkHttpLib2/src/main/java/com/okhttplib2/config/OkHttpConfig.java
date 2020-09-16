@@ -1,6 +1,5 @@
 package com.okhttplib2.config;
 
-import android.os.Handler;
 
 import com.okhttplib2.OkHttpFactory;
 import com.okhttplib2.callback.Http;
@@ -45,8 +44,7 @@ public class OkHttpConfig {
     }
 
     private OkHttpConfig() {
-        interceptors = new ArrayList<>();
-        netInterceptors = new ArrayList<>();
+        check();
     }
 
     public boolean isProxy() {
@@ -90,9 +88,7 @@ public class OkHttpConfig {
     }
 
     public OkHttpConfig addInterceptor(Interceptor interceptor) {
-        if (this.interceptors == null) {
-            this.interceptors = new ArrayList<>();
-        }
+        check();
         if (interceptors != null) {
             this.interceptors.add(interceptor);
         }
@@ -100,9 +96,7 @@ public class OkHttpConfig {
     }
 
     public OkHttpConfig addInterceptors(List<Interceptor> interceptors) {
-        if (this.interceptors == null) {
-            this.interceptors = new ArrayList<>();
-        }
+        check();
         if (interceptors != null) {
             this.interceptors.addAll(interceptors);
         }
@@ -114,9 +108,7 @@ public class OkHttpConfig {
     }
 
     public OkHttpConfig addNetInterceptor(Interceptor netInterceptor) {
-        if (this.netInterceptors == null) {
-            this.netInterceptors = new ArrayList<>();
-        }
+        check();
         if (netInterceptors != null) {
             this.netInterceptors.add(netInterceptor);
         }
@@ -124,13 +116,20 @@ public class OkHttpConfig {
     }
 
     public OkHttpConfig addNetInterceptors(List<Interceptor> netInterceptors) {
-        if (this.netInterceptors == null) {
-            this.netInterceptors = new ArrayList<>();
-        }
+        check();
         if (netInterceptors != null) {
             this.netInterceptors.addAll(netInterceptors);
         }
         return this;
+    }
+
+    private void check() {
+        if (this.netInterceptors == null) {
+            this.netInterceptors = new ArrayList<>();
+        }
+        if (this.interceptors == null) {
+            this.interceptors = new ArrayList<>();
+        }
     }
 
     public String getCachePath() {

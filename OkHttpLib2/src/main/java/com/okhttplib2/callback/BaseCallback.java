@@ -60,10 +60,12 @@ public class BaseCallback implements Callback {
             log("响应对象response 为空");
             return;
         }
+        if (callback == null) return;
+
         if (builder.getLifecycle() != null && builder.getLifecycle().getCurrentState() == Lifecycle.State.DESTROYED) {
             return;
         }
-        if (callback != null && callback.mType != null && callback.mType == Response.class) {
+        if (callback.mType != null && callback.mType == Response.class) {
             uiCall.sendSuccessCall(callback, response);
             return;
         }
@@ -77,7 +79,7 @@ public class BaseCallback implements Callback {
             log(success + "," + code + "<<" + builder.url() + "<<返回数据:" + str);
             info = str;
             if (success) {
-                if (callback != null && callback.mType != null && !TextUtils.isEmpty(info)) {
+                if (callback.mType != null && !TextUtils.isEmpty(info)) {
                     if (checkResponseInterceptor(code, info)) {
                         if (callback.mType == String.class) {
                             uiCall.sendSuccessCall(callback, info);
@@ -90,7 +92,7 @@ public class BaseCallback implements Callback {
                         }
                     }
                 } else
-                    uiCall.sendFailedCall(callback, code, new Exception(":回调 or 返回数据 or 解析类型为空"));
+                    uiCall.sendFailedCall(callback, code, new Exception(":返回数据 or 解析类型为空"));
             } else
                 uiCall.sendFailedCall(callback, code, new Exception(":response.isSuccessful() is not be true!"));
         } catch (JsonParseException e) {
