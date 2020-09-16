@@ -2,7 +2,7 @@
 基于activity 根布局封装的dialog
 
 
-    想使用Dialog一样使用DecorDialog
+    像使用Dialog一样使用DecorDialog
 
     继承DecorDialog
 

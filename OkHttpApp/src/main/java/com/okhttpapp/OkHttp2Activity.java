@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import okhttp3.Response;
 
 /**
  * Create by JFZ
@@ -26,18 +27,14 @@ public class OkHttp2Activity extends AppCompatActivity {
     }
 
     public void syncGet(View view) {
-        HttpImpl.get("http://www.baidu.com")
-                .bind(this)
-                .enqueue(new RequestCallback<String>() {
-                    @Override
-                    public void onResponse(String data) {
-                        Toast.makeText(OkHttp2Activity.this, data, Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onError(int code, Exception e) {
-                        Toast.makeText(OkHttp2Activity.this, "请求失败:" + code + "," + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+        try {
+            Response response = HttpImpl.get("http://www.baidu.com").bind(this).execute();
+            if (response != null) {
+                String string = response.body().string();
+                Toast.makeText(this, "返回:" + string, Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "同步catch:" + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 }
