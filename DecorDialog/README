@@ -1,2 +1,90 @@
 
 基于activity 根布局封装的dialog
+
+
+    想使用Dialog一样使用DecorDialog
+
+    继承DecorDialog
+
+    //添加自己的布局文件
+    setContentView(view);
+    setContentView(layoutId);
+
+    //窗口显示位置 Gravity.CENTER  Gravity.BOTTOM 等等
+    setGravity(Gravity.TOP);
+    //点击窗口外部区域是否关闭
+    setCanceledOnTouchOutside(boolean);
+    //点击返回键是否关闭窗口
+    setCancelable(boolean);
+    //是否拦截底层布局的事件，默认为拦截；  拦截：底层布局事件不可点击等； 不拦截：底层布局可点击
+    setRootTouchEvent(boolean);
+    //阴影透明度 范围： [0,1]
+    dimAmount(float);
+    //设置窗口背景色 即阴影颜色
+    setWindowColor(int);
+    //设置窗口弹出和退出动画 anim文件的文件
+    setAnimsStyle(enter,exit);
+    //获取上下文
+    getContext();
+    //设置窗口宽度
+    setWidth(int);
+    //设置窗口高度
+    setHeight(int);
+    //获取窗口控件
+    findViewById(id);
+    //弹框关闭监听
+    setOnDismissListener(listener);
+    //显示窗口
+    show();
+    //关闭窗口; 只是关闭内容依然在， 可用show()再次展示
+    dismiss();
+    //关闭窗口;  true: 销毁窗口所有内容，再次展示需要重新实例化， false： 不销毁内容
+    dismiss(boolean);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
