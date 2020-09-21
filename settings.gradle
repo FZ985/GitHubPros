@@ -1,3 +1,4 @@
+include ':ProgressView'
 include ':app1'
 include ':GooglePayTest'
 include ':DecorDialog', ':OkHttpLib2', ':OkHttpApp'
