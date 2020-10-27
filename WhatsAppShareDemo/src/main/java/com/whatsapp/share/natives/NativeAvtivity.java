@@ -32,7 +32,7 @@ public class NativeAvtivity extends AppCompatActivity {
     }
 
     public void shareText(View view) {
-        WhatsNative.shareText(this, "text");
+        WhatsNative.shareText(this, "https://www.baidu.com");
     }
 
     public void shareFileImage(View view) {

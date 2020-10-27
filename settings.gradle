@@ -1,3 +1,4 @@
+include ':IViews'
 include ':WhatsAppShareDemo'
 include ':ProgressView'
 include ':app1'
