@@ -44,23 +44,23 @@ public class MainActivity extends AppCompatActivity {
             });
         } else Permission.reqReadPermission(this);
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (manager != null) {
-            manager.onResume(this);
-        }
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (manager != null) {
-            manager.onStop(this);
-        }
-        Logs.log("onStop");
-    }
+//
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        if (manager != null) {
+//            manager.onResume(this);
+//        }
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        if (manager != null) {
+//            manager.onStop(this);
+//        }
+//        Logs.log("onStop");
+//    }
 
     @Override
     protected void onDestroy() {

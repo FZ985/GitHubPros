@@ -16,7 +16,7 @@ public class Util {
     private static final String[] KEYWORDS = {
             "screenshot", "Screenshots", "Screenshot_", "Screen_shot", "Screen__shots", "screen_shot", "screen-shot", "screen shot",
             "screencapture", "screen_capture", "screen-capture", "screen capture",
-            "screencap", "screen_cap", "screen-cap", "screen cap"
+            "screencap", "screen_cap", "screen-cap", "screen cap", "截屏"
     };
 
 
