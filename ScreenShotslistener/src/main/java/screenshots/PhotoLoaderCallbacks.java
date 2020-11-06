@@ -14,9 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static android.provider.MediaStore.MediaColumns.BUCKET_DISPLAY_NAME;
 import static android.provider.MediaStore.MediaColumns.DATA;
 import static android.provider.MediaStore.MediaColumns.DATE_TAKEN;
+import static android.provider.MediaStore.MediaColumns.DISPLAY_NAME;
 import static android.provider.MediaStore.MediaColumns.SIZE;
 
 public class PhotoLoaderCallbacks implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -43,18 +43,17 @@ public class PhotoLoaderCallbacks implements LoaderManager.LoaderCallbacks<Curso
         }
         List<ShotsImage> list = new ArrayList<>();
         while (data.moveToNext()) {
-//            int imageId = data.getInt(data.getColumnIndexOrThrow(BaseColumns._ID));
-//            String bucketId = data.getString(data.getColumnIndexOrThrow(BUCKET_ID));
-            String name = data.getString(data.getColumnIndexOrThrow(BUCKET_DISPLAY_NAME));
             String path = data.getString(data.getColumnIndexOrThrow(DATA));
+            String display_name = data.getString(data.getColumnIndexOrThrow(DISPLAY_NAME));
             long date = data.getLong(data.getColumnIndexOrThrow(DATE_TAKEN));
             long size = data.getInt(data.getColumnIndexOrThrow(SIZE));
 
             if (size < 1) {
                 continue;
             }
+            Logs.log("display_name:" + display_name);
             if (Util.hasKeyWords(path) && Util.checkDate(date)) {
-                list.add(new ShotsImage(name, path, size, date));
+                list.add(new ShotsImage(display_name, path, size, date));
             }
         }
         if (resultCallback != null && list.size() > 0) {
