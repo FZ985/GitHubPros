@@ -51,7 +51,7 @@ public class PhotoLoaderCallbacks implements LoaderManager.LoaderCallbacks<Curso
             if (size < 1) {
                 continue;
             }
-            Logs.log("display_name:" + display_name);
+//            Logs.log("display_name:" + display_name);
             if (Util.hasKeyWords(path) && Util.checkDate(date)) {
                 list.add(new ShotsImage(display_name, path, size, date));
             }
