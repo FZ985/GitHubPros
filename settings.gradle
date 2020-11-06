@@ -1,3 +1,4 @@
+include ':ScreenShotslistener'
 include ':JniTestApp'
 include ':JniTest'
 include ':IViews'
