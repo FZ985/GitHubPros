@@ -1,9 +1,11 @@
 package com.screenshots;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -24,10 +26,7 @@ public class MainActivity extends AppCompatActivity {
         shortcut = findViewById(R.id.shortcut);
     }
 
-    private int count;
-
     public void start(View view) {
-        count = 0;
         if (Permission.hasReadPermission(this)) {
             if (manager == null) {
                 manager = new ScreenShotsManager();
@@ -35,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
             manager.startLoader(this, new ScreenShotsManager.ScreenShotsCall() {
                 @Override
                 public void onResult(ShotsImage image) {
-                    count++;
-                    Logs.log("count:" + count);
+                    Logs.log("count:" + image.getPath());
                     Glide.with(MainActivity.this)
                             .load(image.getPath())
                             .into(shortcut);
@@ -60,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
             manager.onStop(this);
         }
         Logs.log("onStop");
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Logs.log("onActivityResult");
     }
 
     @Override

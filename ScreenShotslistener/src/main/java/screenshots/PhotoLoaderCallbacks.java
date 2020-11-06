@@ -1,9 +1,12 @@
 package screenshots;
 
 
+import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -51,7 +54,8 @@ public class PhotoLoaderCallbacks implements LoaderManager.LoaderCallbacks<Curso
             if (size < 1) {
                 continue;
             }
-//            Logs.log("display_name:" + display_name);
+            Logs.log("path:" + path);
+            Logs.log("display_name:" + display_name);
             if (Util.hasKeyWords(path) && Util.checkDate(date)) {
                 list.add(new ShotsImage(display_name, path, size, date));
             }
@@ -69,4 +73,28 @@ public class PhotoLoaderCallbacks implements LoaderManager.LoaderCallbacks<Curso
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
 
     }
+
+    private static Uri getUri(Cursor cursor) {
+        long id = cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns._ID));
+        String mimeType = cursor.getString(
+                cursor.getColumnIndex(MediaStore.MediaColumns.MIME_TYPE));
+        Uri contentUri;
+
+        if (isImage(mimeType)) {
+            contentUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+        } else {
+            // ?
+            contentUri = MediaStore.Files.getContentUri("external");
+        }
+
+        Uri uri = ContentUris.withAppendedId(contentUri, id);
+        return uri;
+    }
+
+    public static boolean isImage(String mimeType) {
+        if (mimeType == null) return false;
+        return mimeType.startsWith("image");
+    }
+
+
 }
