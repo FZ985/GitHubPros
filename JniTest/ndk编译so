@@ -1,0 +1,103 @@
+
+jni 编写及生成so 文件
+
+参考链接
+https://www.jianshu.com/p/09ff3300f453
+https://www.jianshu.com/p/3494741f0ad1
+
+编写工具配置:  android studio4.0
+             gradle6.1.1
+             ndk16r
+
+1.编写 SdNative 类;加载so;定义 函数
+  编写 SdkConstant 测试类;
+  Make Project;
+
+  会在build中生成.class文件
+  如: E:\Android_AS_Work_GitHub\GitHubPros\JniTest\build\intermediates\javac\debug\classes\com\jni\com.jni.sdk\SdkNative.class
+
+
+2. 打开Android Studio的Terminal
+
+   定位到该项目的 main位置;
+   如： E:\Android_AS_Work_GitHub\GitHubPros\JniTest\src\main>
+
+   然后执行命令: javah -d jni -classpath 你的.class文件的绝对地址
+   如: javah -d jni -classpath E:\Android_AS_Work_GitHub\GitHubPros\JniTest\build\intermediates\javac\debug\classes com.jni.com.jni.com.jni.sdk.SdkNative
+   (定位到classes即可,然后写包名下的路径,不要后缀)
+
+   然后该项目创建了 jni文件夹并创建了 .h文件,
+   不需要对这个 .h 文件做任何的处理
+
+3. 在jni文件夹中编写 wy_sdk-lib.cpp
+   文件名要和 System.loadLibrary("wy_sdk-lib"); 中定义的一样
+
+   然后在 cpp文件中导入 .h文件
+
+
+4. 在build.gradle 中配置 ndk
+
+    ndk {
+                moduleName "wy_sdk-lib"
+                abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64', 'x86_64'
+         }
+
+    moduleName 的值同样为 System.loadLibrary("wy_sdk-lib"); 的参数
+
+5. 在jni文件夹下创建 mk文件
+
+   1. Android.mk
+
+    例:
+        LOCAL_PATH := $(call my-dir)
+
+        include $(CLEAR_VARS)
+
+        LOCAL_MODULE := wy_sdk-lib.cpp
+        LOCAL_SRC_FILES =: wy_sdk-lib.cpp
+        include $(BUILD_SHARED_LIBRARY)
+
+
+     LOCAL_SRC_FILES 列出所有要编译的 c源码文件
+
+
+     2.  Application.mk
+
+      例:
+         APP_MODULES := wy_sdk-lib
+         APP_ABI := all
+
+
+6. 配置 ndk-build
+   点击File - Setting - Tools - External Tools 打开外部工具配置页，点击 + 新建一个工具。
+
+   name 和 description 自己定义即可
+
+   Program:
+        C:\Users\Chenhe\AppData\Local\Android\Sdk\ndk-bundle\build\ndk-build.cmd
+   Working directory:
+        $ProjectFileDir$\app\src\main
+
+   后两个注意 要改成自己的路径,  一个是 ndk-build的路径; 一个 项目的main路径
+
+   确定保存
+
+   右键项目 选择 External Tools - ndk-build 即可编译 c 源码。成功后可以看见创建了 libs 目录，里面包含了不同平台下的 so 文件。
+
+
+
+7. 最后测试
+
+
+
+
+
+
+
+
+
+
+
+
+
+

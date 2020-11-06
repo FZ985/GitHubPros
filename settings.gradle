@@ -1,3 +1,5 @@
+include ':JniTestApp'
+include ':JniTest'
 include ':IViews'
 include ':WhatsAppShareDemo'
 include ':ProgressView'

@@ -1,0 +1,18 @@
+
+修改Java类的静态变量
+
+    还是以 SdkNative 与 SdkConstant 类做测试
+
+
+    调用 SdkNative 的 updateValue()函数 来给 SdkConstant类中的 BASE_URL 属性赋值
+
+
+    //获取指定静态类的class对象
+    jclass constantCls = (*env).FindClass("com/jni/sdk/SdkConstant");
+
+    //获取静态属性字段的id   Ljava/lang/String;
+    // 参数1: 静态类class;  参数2: 字段的名字;   参数3: 字段的类型
+    jfieldID baseUrlId = (*env).GetStaticFieldID(constantCls, "BASE_URL", "Ljava/lang/String;");
+
+    //修改BASE_URL的属性值
+    env->SetStaticObjectField(constantCls,baseUrlId, (*env).NewStringUTF("https://www.baidu.com"));

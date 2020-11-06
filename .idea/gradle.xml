@@ -14,6 +14,8 @@
             <option value="$PROJECT_DIR$/DecorDialog" />
             <option value="$PROJECT_DIR$/GooglePayTest" />
             <option value="$PROJECT_DIR$/IViews" />
+            <option value="$PROJECT_DIR$/JniTest" />
+            <option value="$PROJECT_DIR$/JniTestApp" />
             <option value="$PROJECT_DIR$/OkHttpApp" />
             <option value="$PROJECT_DIR$/OkHttpLib2" />
             <option value="$PROJECT_DIR$/ProgressView" />
