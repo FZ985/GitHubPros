@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/DecorDialog" />
+            <option value="$PROJECT_DIR$/DouYinVideo" />
             <option value="$PROJECT_DIR$/GooglePayTest" />
             <option value="$PROJECT_DIR$/IViews" />
             <option value="$PROJECT_DIR$/JniTest" />
@@ -21,7 +22,8 @@
             <option value="$PROJECT_DIR$/ProgressView" />
             <option value="$PROJECT_DIR$/ScreenShotslistener" />
             <option value="$PROJECT_DIR$/WhatsAppShareDemo" />
-            <option value="$PROJECT_DIR$/app1" />
+            <option value="$PROJECT_DIR$/jiaozivideodemo" />
+            <option value="$PROJECT_DIR$/jzvdlibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
