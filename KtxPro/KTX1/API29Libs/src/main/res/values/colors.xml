@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black22">#222222</color>
+    <color name="black20">#FF202020</color>
+    <color name="black30">#303030</color>
+    <color name="black33">#333333</color>
+    <color name="black32">#323232</color>
+    <color name="black44">#444444</color>
+    <color name="black66">#666666</color>
+    <color name="black70">#707070</color>
+    <color name="black77">#777777</color>
+    <color name="black99">#999999</color>
+</resources>

@@ -1,0 +1,26 @@
+{
+  "easyGoVersion": "1.0",
+  "client": "com.qiyi.video",
+  "logicEntities": [
+    {
+      "head": {
+        "function": "magicwindow",
+        "required": "true"
+      },
+      "body": {
+        "mode":"1",
+        "supportVideoFullscreen": "true",
+        "activityPairs":[
+          {"from":"org.qiyi.android.video.MainActivity","to":"*"},
+          {"from":"com.qiyi.video.WelcomeActivity","to":"*"}
+        ],
+        "transActivities":[
+        ],
+        "UX": {
+          "supportRotationUxCompat": "false",
+          "isDraggable": "true"
+        }
+      }
+    }
+  ]
+}

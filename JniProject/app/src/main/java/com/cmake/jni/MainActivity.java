@@ -1,9 +1,9 @@
 package com.cmake.jni;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import jni.jfz.http.NativeHttp;
 
@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'native-lib' library on application startup.
     static {
-//        System.loadLibrary("native-lib");
+        System.loadLibrary("native-lib");
     }
 
     @Override
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Example of a call to a native method
         TextView tv = findViewById(R.id.sample_text);
-//        tv.setText(stringFromJNI());
+        tv.setText(stringFromJNI());
         NativeHttp.getInstance().getNative("http://www.baidu.com", null);
     }
 

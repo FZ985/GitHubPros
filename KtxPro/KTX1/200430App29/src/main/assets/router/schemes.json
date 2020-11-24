@@ -1,0 +1,27 @@
+{
+  "version": "2",
+  "schemes": [
+    {
+      "scheme": "iqiyi://router/search/video_info",
+      "activity": "org.qiyi.video.page.videoinfo.view.VideoInfoActivity",
+      "registry": [
+        {
+          "biz_id": "100",
+          "biz_sub_id": "506"
+        }
+      ],
+      "mapping": [
+        {
+          "registry_param": "url",
+          "intent_param": "BUNDLE_URL_PATH",
+          "type": "string"
+        },
+        {
+          "registry_param": "title",
+          "intent_param": "BUNDLE_TITLE",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

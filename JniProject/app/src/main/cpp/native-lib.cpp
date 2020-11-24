@@ -1,6 +1,6 @@
 #include <jni.h>
 #include <string>
-#include "common.h"
+#include "jnitool.h"
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_cmake_jni_MainActivity_stringFromJNI(
