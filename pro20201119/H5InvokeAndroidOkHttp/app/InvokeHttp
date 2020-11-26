@@ -1,0 +1,162 @@
+
+h5调用 android的 okhttp请求
+
+var result = window.app.invoke("http",配置);
+
+-------------------------------------------------------
+
+配置参数:
+       get请求:
+
+           var obj = {
+                get:{
+                    baseUrl:"",
+                    url:"",
+                    params:{
+                        username:"xxxx",
+                        userPass:"xxxx"
+                    },
+                    timeout:10,
+                    async:true,
+                    loading:true,
+                    headers:{
+                        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                        "xxxxx":"xxxxx"
+                    },
+                    success:"onSuccess",
+                    error:"onError"
+                }
+           }
+
+       -----------------------------------------------------------------------------------------
+       postJson请求:
+
+           var obj = {
+                post:{
+                    baseUrl:"",
+                    url:"",
+                    params:{
+                        username:"xxxx",
+                        userPass:"xxxx"
+                    },
+                    timeout:10,
+                    async:true,
+                    loading:true,
+                    headers:{
+                          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                          "xxxxx":"xxxxx"
+                    },
+                    success:"onSuccess",
+                    error:"onError"
+                }
+           }
+
+       -----------------------------------------------------------------------------------------
+       postParams请求:
+
+           var obj = {
+                postParams:{
+                    baseUrl:"",
+                    url:"",
+                    params:{
+                        username:"xxxx",
+                        userPass:"xxxx"
+                    },
+                    timeout:10,
+                    async:true,
+                    loading:true,
+                    headers:{
+                          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                          "xxxxx":"xxxxx"
+                    },
+                    success:"onSuccess",
+                    error:"onError"
+                }
+           }
+
+       -----------------------------------------------------------------------------------------
+       postFrom请求:
+
+           var obj = {
+                postFrom:{
+                    baseUrl:"",
+                    url:"",
+                    params:{
+                        username:"xxxx",
+                        userPass:"xxxx"
+                    },
+                    timeout:10,
+                    loading:true,
+                    headers:{
+                          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                          "xxxxx":"xxxxx"
+                    },
+                    async:true,
+                    success:"onSuccess",
+                    error:"onError"
+                }
+           }
+
+请求的方式的键值为:
+ get
+ post
+ postParams
+ postFrom
+
+ (post 为 json类型请求方式)
+
+baseUrl: 接口域名,不配置的情况下url参数必须为 完整接口路径;
+
+url: 接口名称,不配置的情况下baseUrl参数必须为 完整的接口路径;(如果配置了baseUrl并且 url为完整路径则配置的 baseUrl无效);
+
+params: 请求参数, get,post,postParams,postFrom 有参数时必传;
+
+timeout: 请求超时时间,不传默认为10秒
+
+loading: 请求过程中是否弹出loading框,不传默认 false 不弹;
+
+headers: 设置请求头部, 选填
+
+async: 是否问同步, 默认问false 异步
+
+success: 成功回调的函数名, 字符串可自定义,异步请求才有效
+
+error: 失败回调的函数名, 字符串可自定义,异步请求才有效
+
+同步请求的结果 直接是调用函数返回的值;
+
+异步请求成功或失败后 会 调用 success 或 error 的 函数名
+
+如 h5端传的success 为 onSuccess
+
+则 成功回调为
+
+   function onSuccess(e){
+        if(e.code == 200){
+            alert(e.data);
+        }
+   }
+失败回调同理
+
+
+成功、失败回调 返回格式为json格式的对象:
+    {
+        code:200,
+        message:"",
+        data:"xxxxxxx"
+    }
+
+    data: 服务器返回的数据
+
+    code、message 只有请求失败才会有相应的 错误码和 信息
+
+
+
+
+
+
+
+
+
+
+

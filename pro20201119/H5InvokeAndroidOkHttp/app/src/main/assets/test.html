@@ -1,0 +1,139 @@
+<html>
+<head>
+    <title>测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <script type="text/javascript">
+
+        var ipUrl = "http://apis.juhe.cn/ip/ipNew";
+        var testUrl = "http://appapi1.lnamphp.com/job/app/job/qrCodeInfo";
+        var baidu = "https://www.baidu.com";
+
+        function invokeHttp(){
+            var obj = {
+                get:{
+                    baseUrl:"",
+                    url:baidu,
+                    loading:true,
+                    success:"httpSuccess",
+                    headers:{
+                        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+                    }
+                }
+            };
+            var content = window.app.invoke("http",JSON.stringify(obj));
+        }
+
+
+        function GetInvokeHttp(){
+            var obj = {
+                get:{
+                    baseUrl:"",
+                    url:ipUrl,
+                    params:{
+                        ip:"192.168.0.99",
+                        key:"9f703454a63103c1588a6abfec6ef91d"
+                    },
+                    success:"httpSuccess"
+                }
+            };
+            var content = window.app.invoke("http",JSON.stringify(obj));
+        }
+
+
+        function PostParamsInvokeHttp(){
+            var obj = {
+                postParams:{
+                    baseUrl:"",
+                    url:ipUrl,
+                    params:{
+                        ip:"192.168.0.99",
+                        key:"9f703454a63103c1588a6abfec6ef91d"
+                    },
+                    success:"httpSuccess"
+                }
+            };
+            var content = window.app.invoke("http",JSON.stringify(obj));
+        }
+
+
+        function PostJsonInvokeHttp(){
+            var obj = {
+                post:{
+                    baseUrl:"",
+                    url:testUrl,
+                    params:{
+                        os:"android",
+                        version:"3.0.1",
+                        changel:"guanfang",
+                        userCode:"1082565",
+                        pars:{
+                            list:["%fa09-16-11-1234567890"]
+                        },
+                    },
+                    success:"httpSuccess"
+                }
+            };
+            var content = window.app.invoke("http",JSON.stringify(obj));
+        }
+
+
+        function SyncGetInvokeHttp(){
+            var obj = {
+                get:{
+                    baseUrl:"",
+                    async:false,
+                    url:baidu,
+                    loading:true
+                }
+            };
+            var content = window.app.invoke("http",JSON.stringify(obj));
+            alert(content);
+        }
+
+
+        function httpSuccess(e){
+            window.document.getElementById("show").innerHTML = e.data;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+<p>
+<p style="width:100%" id="show">
+</p>
+</p>
+<p>
+<p># 异步调用 ###################</p>
+<br/>
+<input type="button" value="get" style="padding:10px" onclick="invokeHttp();"/>
+<br/>
+<input type="button" style="margin-top:20px;padding:10px" value="get带参数"
+       onclick="GetInvokeHttp();"/>
+<br/>
+<input type="button" style="margin-top:20px;padding:10px" value="post带参数"
+       onclick="PostParamsInvokeHttp();"/>
+<br/>
+<input type="button" style="margin-top:20px;padding:10px" value="postJson"
+       onclick="PostJsonInvokeHttp();"/>
+<br/>
+<p># 同步调用 ###################</p>
+<br/>
+<input type="button" style="margin-top:2px;padding:10px" value="同步get"
+       onclick="SyncGetInvokeHttp();"/>
+
+</p>
+
+</body>
+</html>

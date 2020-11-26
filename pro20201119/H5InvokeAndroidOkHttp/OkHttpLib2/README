@@ -1,0 +1,239 @@
+
+
+okhttp的简单封装使用
+
+    get同步:
+
+            try {
+                Response response = HttpImpl.get("http://www.baidu.com").bind(this).execute();
+                if (response != null) {
+                    String string = response.body().string();
+                    Toast.makeText(this, "返回:" + string, Toast.LENGTH_SHORT).show();
+                }
+            } catch (Exception e) {
+                Toast.makeText(this, "同步catch:" + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
+    ------------------------------------------------------------------------------------------------
+    get异步：
+    HttpImpl.get("http://www.baidu.com")
+                    .bind(this)
+                    .load(DefLoad.use(this))
+                    .enqueue(new RequestCallback<String>() {
+                        @Override
+                        public void onResponse(String data) {
+                            Toast.makeText(OkHttp2Activity.this, "请求成功:" + data, Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onError(int code, Exception e) {
+                            Toast.makeText(OkHttp2Activity.this, "请求失败:" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+
+    ------------------------------------------------------------------------------------------------
+    postParams同步：
+
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("ip", "192.168.0.99");
+            map.put("key", "9f703454a63103c1588a6abfec6ef91d");
+            try {
+                IPBean data = (IPBean) HttpImpl.postParams(ipUrl)
+                        .request(new JRequest(IPBean.class, map))
+                        .executeObject();
+                if (data != null) {
+                    Toast.makeText(this, "请求成功:" + data.toString(), Toast.LENGTH_SHORT).show();
+                }
+            } catch (Exception e) {
+                Toast.makeText(this, "请求失败:" + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
+    ------------------------------------------------------------------------------------------------
+    postParams异步：
+
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("ip", "192.168.0.99");
+            map.put("key", "9f703454a63103c1588a6abfec6ef91d");
+            HttpImpl.postParams(ipUrl)
+                    .request(new JRequest(map))
+                    .enqueue(new RequestCallback<IPBean>() {
+                        @Override
+                        public void onResponse(IPBean data) {
+                            Toast.makeText(OkHttp2Activity.this, "请求成功:" + data.toString(), Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onError(int code, Exception e) {
+                            Toast.makeText(OkHttp2Activity.this, "请求失败:" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+
+    ------------------------------------------------------------------------------------------------
+
+    postJson异步：
+
+            HttpImpl.postJson(testUrl)
+                    .request(new JRequest(new JsonReq("1082565")))
+                    .enqueue(new RequestCallback<JsonResp>() {
+                        @Override
+                        public void onResponse(JsonResp data) {
+                            Toast.makeText(OkHttp2Activity.this, "请求成功:" + data.toString(), Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onError(int code, Exception e) {
+                            Toast.makeText(OkHttp2Activity.this, "请求失败:" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+    ------------------------------------------------------------------------------------------------
+
+    下载：
+
+      HttpImpl.download3(String url, String path, String fileName, DownLoadListenerAdapter call);
+
+    ------------------------------------------------------------------------------------------------
+
+    拓展:
+
+
+        OkHttpConfig.getInstance()
+
+                //可配置自己的OkHttpClientBuilder，不使用内部的
+                .setBuilder(builder)
+
+                //可配置自己的OkHttpClient，不使用内部的
+                .setHttpClient(okHttpClient)
+
+                //配置自己的缓存策略
+                .setCacheControl(cachecontrol)
+
+                //缓存路径
+                .setCachePath(cachePath)
+
+                //cookie设置
+                .setCookieJar(cookiejar)
+
+                //抓包工具不可见，默认true不可见
+                .setProxy(bool)
+
+                //添加网络拦截器
+                .addNetInterceptor(interceptor)
+
+                //添加拦截器
+                .addInterceptor(interceptor)
+
+                //针对该库的全局请求拦截，返回布尔值，true:继续往下执行逻辑；false：拦截，不执行请求
+                //如果需要，可根据方法中的参数做你的逻辑需求
+                .setRequestInterceptor(builder -> true)
+
+                //针对该库的全局响应拦截，返回布尔值，true:继续往下执行逻辑；false:拦截，不会回调给每个接口的回调
+                .setResponseInterceptor(new Http.ResponseInterceptor() {
+                    //拦截响应成功，如果需要，可根据方法中的参数做你的逻辑需求
+                    @Override
+                    public boolean interceptorResponse(Http.GETBuilder builder, Http.UICall uiCall, RequestCallback<?> callback, int code, String result) {
+                        return true;
+                    }
+                    //拦截响应成功，如果需要，可根据方法中的参数做你的逻辑需求
+                    @Override
+                    public boolean interceptorResponseErr(Http.GETBuilder builder, Http.UICall uiCall, RequestCallback<?> callback, Exception e) {
+                        return true;
+                    }
+                })
+
+                //初始化配置，如果配置前面有网络请求需要调用此函数;若果配置在所有网络请求之前则不需要调用此函数
+                .init();
+
+
+        其他需求有待开发。。。。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
