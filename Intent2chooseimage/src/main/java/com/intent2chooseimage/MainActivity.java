@@ -9,11 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.intent2chooseimage.choose.BaseImage64Utils;
 import com.intent2chooseimage.choose.FileChooser;
-
-import java.io.File;
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView iamgeIv;
@@ -33,18 +29,19 @@ public class MainActivity extends AppCompatActivity {
                 .setCall(uris -> {
                     System.out.println("ddd_uris:" + uris.length);
                     System.out.println("ddd_path:" + uris[0].toString());
-                    System.out.println("ddd_string:" + BaseImage64Utils.getRealFilePath(this, uris[0]));
-                    String base64 = BaseImage64Utils.fileToBase64(new File(BaseImage64Utils.getRealFilePath(this, uris[0])));
-                    System.out.println("ddd_base64:" + base64);
-                    File image = getExternalFilesDir("image");
-                    System.out.println("ddd_file:" + image.getPath());
-                    File imageFile = new File(image, System.currentTimeMillis() + ".jpg");
-                    try {
-                        imageFile.createNewFile();
-                        BaseImage64Utils.base64ToFile(base64, imageFile.getPath());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+//                    System.out.println("ddd_string:" + BaseImage64Utils.getRealFilePath(this, uris[0]));
+//                    String base64 = BaseImage64Utils.fileToBase64(new File(BaseImage64Utils.getRealFilePath(this, uris[0])));
+//                    System.out.println("ddd_base64:" + base64);
+//                    File image = getExternalFilesDir("image");
+//                    System.out.println("ddd_file:" + image.getPath());
+//                    File imageFile = new File(image, System.currentTimeMillis() + ".jpg");
+//                    try {
+//                        imageFile.createNewFile();
+//                        BaseImage64Utils.base64ToFile(base64, imageFile.getPath());
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+
                     Glide.with(iamgeIv)
                             .load(uris[0])
                             .into(iamgeIv);

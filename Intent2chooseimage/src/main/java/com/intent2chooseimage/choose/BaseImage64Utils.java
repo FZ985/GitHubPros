@@ -4,8 +4,13 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
+import android.os.FileUtils;
 import android.provider.MediaStore;
+import android.provider.OpenableColumns;
 import android.util.Base64;
+
+import androidx.annotation.RequiresApi;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -102,5 +107,33 @@ public class BaseImage64Utils {
             }
         }
         return data;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    public static File uriToFileApiQ(Context context,Uri uri) {
+        File file = null;
+        //android10以上转换
+        if (uri.getScheme().equals(ContentResolver.SCHEME_FILE)) {
+            file = new File(uri.getPath());
+        } else if (uri.getScheme().equals(ContentResolver.SCHEME_CONTENT)) {
+            //把文件复制到沙盒目录
+            ContentResolver contentResolver = context.getContentResolver();
+            Cursor cursor = contentResolver.query(uri, null, null, null, null);
+            if (cursor.moveToFirst()) {
+                String displayName = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                try {
+                    InputStream is = contentResolver.openInputStream(uri);
+                    File cache = new File(context.getExternalCacheDir().getAbsolutePath(), Math.round((Math.random() + 1) * 1000) + displayName);
+                    FileOutputStream fos = new FileOutputStream(cache);
+                    FileUtils.copy(is, fos);
+                    file = cache;
+                    fos.close();
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return file;
     }
 }
