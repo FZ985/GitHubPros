@@ -7,8 +7,6 @@ import android.webkit.WebView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.okhttplib2.HttpImpl;
-
 public class MainActivity extends AppCompatActivity {
     private WebView main_web;
     private AndroidJsHelper helper;
@@ -30,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         main_web.addJavascriptInterface(helper, "app");
         main_web.setWebChromeClient(new WebChromeClient());
 
-        HttpImpl.postJson("")
-                .bind(this)
-                .enqueue(null);
+
     }
 }
