@@ -3,16 +3,16 @@ package com.okhttplib2.callback;
 import android.app.Activity;
 import android.os.Handler;
 
-import com.okhttplib2.config.RequestBuilder;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
+
 import com.okhttplib2.config.JRequest;
 import com.okhttplib2.config.Loadding;
 import com.okhttplib2.upload.UIProgressRequestListener;
 
 import java.io.File;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Lifecycle;
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
 
@@ -79,17 +79,17 @@ public interface Http {
 
     interface Builder extends Http.Call {
 
-        RequestBuilder url(String url);
+        Http.Builder url(String url);
 
-        RequestBuilder request(JRequest request);
+        Http.Builder request(JRequest request);
 
-        RequestBuilder load(Loadding loadding);
+        Http.Builder load(Loadding loadding);
 
-        RequestBuilder bind(Activity activity);
+        Http.Builder bind(Activity activity);
 
-        RequestBuilder bind(Fragment fragment);
+        Http.Builder bind(Fragment fragment);
 
-        RequestBuilder bind(Lifecycle lifecycle);
+        Http.Builder bind(Lifecycle lifecycle);
 
     }
 

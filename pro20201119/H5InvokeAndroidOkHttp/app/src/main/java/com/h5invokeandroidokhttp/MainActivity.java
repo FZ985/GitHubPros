@@ -1,13 +1,13 @@
 package com.h5invokeandroidokhttp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.os.Build;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.okhttplib2.HttpImpl;
 
 public class MainActivity extends AppCompatActivity {
     private WebView main_web;
@@ -29,5 +29,9 @@ public class MainActivity extends AppCompatActivity {
         main_web.getSettings().setAllowFileAccessFromFileURLs(true);
         main_web.addJavascriptInterface(helper, "app");
         main_web.setWebChromeClient(new WebChromeClient());
+
+        HttpImpl.postJson("")
+                .bind(this)
+                .enqueue(null);
     }
 }

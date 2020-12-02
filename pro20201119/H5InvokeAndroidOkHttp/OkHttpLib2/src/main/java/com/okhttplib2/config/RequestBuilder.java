@@ -43,13 +43,13 @@ public class RequestBuilder implements Http.Builder {
     }
 
     @Override
-    public RequestBuilder url(String url) {
+    public Http.Builder url(String url) {
         this.requestUrl = url;
         return this;
     }
 
     @Override
-    public RequestBuilder request(JRequest request) {
+    public Http.Builder request(JRequest request) {
         this.request = request;
         return this;
     }
@@ -103,7 +103,7 @@ public class RequestBuilder implements Http.Builder {
     }
 
     @Override
-    public RequestBuilder bind(Activity activity) {
+    public Http.Builder bind(Activity activity) {
         if (activity != null && activity instanceof AppCompatActivity) {
             return bind(((AppCompatActivity) new WeakReference<>(activity).get()).getLifecycle());
         }
@@ -111,7 +111,7 @@ public class RequestBuilder implements Http.Builder {
     }
 
     @Override
-    public RequestBuilder bind(Fragment fragment) {
+    public Http.Builder bind(Fragment fragment) {
         if (fragment != null) {
             return bind(fragment.getLifecycle());
         }
@@ -119,7 +119,7 @@ public class RequestBuilder implements Http.Builder {
     }
 
     @Override
-    public RequestBuilder bind(Lifecycle lifecycle) {
+    public Http.Builder bind(Lifecycle lifecycle) {
         this.mLifecycleRegistry = lifecycle;
         return this;
     }

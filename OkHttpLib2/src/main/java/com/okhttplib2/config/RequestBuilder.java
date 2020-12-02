@@ -3,6 +3,11 @@ package com.okhttplib2.config;
 import android.app.Activity;
 import android.text.TextUtils;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
+
 import com.okhttplib2.callback.Http;
 import com.okhttplib2.callback.RequestCallback;
 import com.okhttplib2.upload.UIProgressRequestListener;
@@ -10,10 +15,6 @@ import com.okhttplib2.upload.UIProgressRequestListener;
 import java.io.File;
 import java.lang.ref.WeakReference;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Lifecycle;
 import okhttp3.Response;
 
 /**
@@ -42,13 +43,13 @@ public class RequestBuilder implements Http.Builder {
     }
 
     @Override
-    public RequestBuilder url(String url) {
+    public Http.Builder url(String url) {
         this.requestUrl = url;
         return this;
     }
 
     @Override
-    public RequestBuilder request(JRequest request) {
+    public Http.Builder request(JRequest request) {
         this.request = request;
         return this;
     }
@@ -92,13 +93,13 @@ public class RequestBuilder implements Http.Builder {
     }
 
     @Override
-    public RequestBuilder load(Loadding loadding) {
+    public Http.Builder load(Loadding loadding) {
         this.loadding = loadding;
         return this;
     }
 
     @Override
-    public RequestBuilder bind(Activity activity) {
+    public Http.Builder bind(Activity activity) {
         if (activity != null && activity instanceof AppCompatActivity) {
             return bind(((AppCompatActivity) new WeakReference<>(activity).get()).getLifecycle());
         }
@@ -106,7 +107,7 @@ public class RequestBuilder implements Http.Builder {
     }
 
     @Override
-    public RequestBuilder bind(Fragment fragment) {
+    public Http.Builder bind(Fragment fragment) {
         if (fragment != null) {
             return bind(fragment.getLifecycle());
         }
@@ -114,7 +115,7 @@ public class RequestBuilder implements Http.Builder {
     }
 
     @Override
-    public RequestBuilder bind(Lifecycle lifecycle) {
+    public Http.Builder bind(Lifecycle lifecycle) {
         this.mLifecycleRegistry = lifecycle;
         return this;
     }
