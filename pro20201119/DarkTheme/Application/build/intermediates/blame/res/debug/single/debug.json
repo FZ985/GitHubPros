@@ -1,0 +1,246 @@
+[
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\color_color_on_primary_mask.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\color\\color_on_primary_mask.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_dashboard.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_dashboard.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\layout_fragment_welcome.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\layout\\fragment_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_more_vert.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_more_vert.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_brightness.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_brightness.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_brightness_2.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_brightness_2.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_settings.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_more_vert.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_more_vert.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_brightness_2.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_brightness_2.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_more_vert.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_more_vert.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_brightness_2.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_brightness_2.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_brightness_2.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_brightness_2.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_brightness.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_brightness.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_brightness.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_brightness.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_dashboard.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_settings.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\menu_navigation.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\menu\\navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_nav_item_background.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\drawable\\bottom_nav_item_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_settings.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_settings.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_brightness.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_brightness.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_home.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\xml_preferences.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_settings.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_brightness.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_brightness.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_brightness_2.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_brightness_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_tile.9.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\drawable-hdpi\\tile.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dashboard.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_dashboard.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_more_vert.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_more_vert.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_more_vert.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_more_vert.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_brightness.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_brightness.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_more_vert.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_more_vert.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_settings.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_brightness_2.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_brightness_2.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_more_vert.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_more_vert.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_brightness.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_brightness.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_dashboard.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_dashboard.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_dashboard.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_dashboard.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_brightness_2.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_brightness_2.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_dashboard.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_dashboard.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\layout_fragment_preferences.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\layout\\fragment_preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_settings.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\menu_main_menu.xml.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard.png"
+    },
+    {
+        "merged": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    }
+]

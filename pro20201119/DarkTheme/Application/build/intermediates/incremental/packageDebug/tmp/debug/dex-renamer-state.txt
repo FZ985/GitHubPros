@@ -1,0 +1,4 @@
+#Wed Dec 02 15:07:02 CST 2020
+base.0=C\:\\Users\\ss\\Desktop\\user-interface-samples-master\\DarkTheme\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
