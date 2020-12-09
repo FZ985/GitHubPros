@@ -2,6 +2,8 @@ package com.okhttplib2.callback;
 
 import android.text.TextUtils;
 
+import androidx.lifecycle.Lifecycle;
+
 import com.google.gson.JsonParseException;
 import com.okhttplib2.OkHttpFactory;
 import com.okhttplib2.config.OkHttpConfig;
@@ -9,7 +11,6 @@ import com.okhttplib2.utils.OkhttpUtil;
 
 import java.io.IOException;
 
-import androidx.lifecycle.Lifecycle;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
@@ -33,11 +34,11 @@ public class BaseCallback implements Callback {
     public void onFailure(Call call, IOException e) {
         final long responseTime = System.currentTimeMillis();
         log(builder.url() + "<<error响应时间start:" + builder.requestTime() + ",end:" + responseTime + ",total:" + ((responseTime - builder.requestTime())) + "ms");
+        if (call.isCanceled()) return;
         OkHttpFactory.getInstance().obtainHandler().post(new Runnable() {
             @Override
             public void run() {
                 uiCall.dismissLoadding();
-                if (call.isCanceled()) return;
                 if (builder.getLifecycle() != null && builder.getLifecycle().getCurrentState() == Lifecycle.State.DESTROYED) {
                     return;
                 }
@@ -49,11 +50,11 @@ public class BaseCallback implements Callback {
 
     @Override
     public void onResponse(final okhttp3.Call call, Response response) throws IOException {
+        if (call.isCanceled()) return;
         OkHttpFactory.getInstance().obtainHandler().post(new Runnable() {
             @Override
             public void run() {
                 uiCall.dismissLoadding();
-                if (call.isCanceled()) return;
             }
         });
         if (response == null) {
