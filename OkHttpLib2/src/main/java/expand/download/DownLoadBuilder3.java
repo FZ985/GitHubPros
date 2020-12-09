@@ -3,6 +3,8 @@ package expand.download;
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 
+import androidx.annotation.Nullable;
+
 import com.okhttplib2.OkHttpFactory;
 import com.okhttplib2.utils.OkhttpUtil;
 
@@ -15,7 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executors;
 
-import androidx.annotation.Nullable;
 import okhttp3.Call;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -65,6 +66,7 @@ public class DownLoadBuilder3 {
 
         @Override
         protected Integer doInBackground(String... strings) {
+            OkhttpUtil.log("download", "doInbackground");
             long totalLen = getContentLength(info.url, listener);
             if (totalLen == 0) {
                 return error1;

@@ -35,7 +35,6 @@ public class OkHttpFactory implements Http.Config {
     private static Http.Config factory;
     private static final long cacheSize = 50 * 1024 * 1024;//缓存大小为50M
     private Handler mDelivery;
-
     public static Http.Config getInstance() {
         if (factory == null) {
             synchronized (OkHttpFactory.class) {
@@ -114,6 +113,11 @@ public class OkHttpFactory implements Http.Config {
     @Override
     public void cancelAll() {
         cancel(true, null);
+    }
+
+    @Override
+    public void cancelHttp(Object tag) {
+        OkHttpConfig.getInstance().getTags().put(tag,tag);
     }
 
     private void cancel(boolean isCancelAll, Object tag) {

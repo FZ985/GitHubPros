@@ -48,6 +48,8 @@ public interface Http {
         void cancelAll();
 
         void newBuild();
+
+        void cancelHttp(Object tag);
     }
 
     interface Call {

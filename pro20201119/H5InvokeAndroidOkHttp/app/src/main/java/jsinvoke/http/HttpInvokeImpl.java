@@ -92,6 +92,7 @@ public class HttpInvokeImpl implements JsInvoke {
 
                             @Override
                             public void onError(int code, Exception e) {
+                                System.out.println("error:"+e.getMessage());
                                 if (helper != null && !TextUtils.isEmpty(finalHttp.error)) {
                                     helper.load("javascript:" + finalHttp.error + "(" + new Gson().toJson(new InvokeResponse(code, e.getMessage())) + ")");
                                 }

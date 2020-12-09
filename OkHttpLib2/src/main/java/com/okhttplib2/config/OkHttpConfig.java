@@ -6,6 +6,7 @@ import com.okhttplib2.callback.Http;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.CacheControl;
@@ -31,7 +32,7 @@ public class OkHttpConfig {
     private CacheControl cacheControl;
     private Http.RequestInterceptor requestInterceptor;
     private Http.ResponseInterceptor responseInterceptor;
-
+    private ConcurrentHashMap<Object,Object> tags;
     public static OkHttpConfig getInstance() {
         if (config == null) {
             synchronized (OkHttpConfig.class) {
@@ -172,6 +173,13 @@ public class OkHttpConfig {
     public OkHttpConfig setResponseInterceptor(Http.ResponseInterceptor responseInterceptor) {
         this.responseInterceptor = responseInterceptor;
         return this;
+    }
+
+    public ConcurrentHashMap<Object, Object> getTags() {
+        if (tags == null){
+            tags = new ConcurrentHashMap<>();
+        }
+        return tags;
     }
 
     public void init() {

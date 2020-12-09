@@ -6,18 +6,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.okhttpapp.okhttp2.test.IPBean;
 import com.okhttpapp.okhttp2.test.JsonReq;
 import com.okhttpapp.okhttp2.test.JsonResp;
 import com.okhttplib2.HttpImpl;
+import com.okhttplib2.OkHttpFactory;
 import com.okhttplib2.callback.RequestCallback;
 import com.okhttplib2.config.JRequest;
 
 import java.io.File;
 import java.util.HashMap;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import expand.DefLoad;
 import expand.download.DownLoadBuilder3;
 import expand.download.DownLoadListenerAdapter;
@@ -103,8 +105,9 @@ public class OkHttp2Activity extends AppCompatActivity {
     }
 
     public void postAsyncJson(View view) {
+        JRequest request = new JRequest(new JsonReq("1082565"));
         HttpImpl.postJson(testUrl)
-                .request(new JRequest(new JsonReq("1082565")))
+                .request(request)
                 .enqueue(new RequestCallback<JsonResp>() {
                     @Override
                     public void onResponse(JsonResp data) {
@@ -123,8 +126,8 @@ public class OkHttp2Activity extends AppCompatActivity {
         ((Button) view).setText("download");
         String path = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getPath() + File.separator;
         System.out.println(path);
-        HttpImpl.download3("https://weizhuan-app-h5010.oss-cn-shenzhen.aliyuncs.com/qrCodeSdk/qrshare301.js",
-                path, "qrshare301.js", new DownLoadListenerAdapter() {
+        HttpImpl.download3("https://g37.gdl.netease.com/onmyoji_setup_11.9.0.zip",
+                path, "weixin7021android1800_arm64.zip", new DownLoadListenerAdapter() {
                     @Override
                     public void update(long progress, float percent, long contentLength, boolean done) {
                         runOnUiThread(() -> {
@@ -147,5 +150,9 @@ public class OkHttp2Activity extends AppCompatActivity {
                         });
                     }
                 });
+    }
+
+    public void cancel(View view) {
+        OkHttpFactory.getInstance().cancel("https://g37.gdl.netease.com/onmyoji_setup_11.9.0.zip");
     }
 }

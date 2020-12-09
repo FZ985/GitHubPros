@@ -35,6 +35,7 @@ public class BaseCallback implements Callback {
         final long responseTime = System.currentTimeMillis();
         log(builder.url() + "<<error响应时间start:" + builder.requestTime() + ",end:" + responseTime + ",total:" + ((responseTime - builder.requestTime())) + "ms");
         if (call.isCanceled()) return;
+        if (checkCancel()) return;
         OkHttpFactory.getInstance().obtainHandler().post(new Runnable() {
             @Override
             public void run() {
@@ -51,6 +52,7 @@ public class BaseCallback implements Callback {
     @Override
     public void onResponse(final okhttp3.Call call, Response response) throws IOException {
         if (call.isCanceled()) return;
+        if (checkCancel()) return;
         OkHttpFactory.getInstance().obtainHandler().post(new Runnable() {
             @Override
             public void run() {
@@ -117,6 +119,17 @@ public class BaseCallback implements Callback {
             return OkHttpConfig.getInstance().getResponseInterceptor().interceptorResponseErr(builder, uiCall, callback, e);
         }
         return true;
+    }
+
+    //验证请求过程中是否取消了请求,如果取消了,在响应结果中不会将数据回调给callback
+    private boolean checkCancel() {
+        if (this.builder.request() != null
+                && this.builder.request().tag != null
+                && OkHttpConfig.getInstance().getTags().contains(builder.request().tag)) {
+            OkHttpConfig.getInstance().getTags().remove(builder.request().tag);
+            return true;
+        }
+        return false;
     }
 
     private void log(String m) {
