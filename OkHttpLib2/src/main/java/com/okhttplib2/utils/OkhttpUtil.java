@@ -240,7 +240,14 @@ public class OkhttpUtil {
             }
         }
         RequestBody requestBody = builder.build();
-        return getBuilder(methodBuilder, methodBuilder.request(), uiProgressRequestListener == null ? requestBody : ProgressHelper.addProgressRequestListener(requestBody, uiProgressRequestListener)).url(methodBuilder.url()).tag(methodBuilder.url()).build();
+        return getBuilder(methodBuilder,
+                methodBuilder.request(),
+                uiProgressRequestListener == null
+                        ? requestBody
+                        : ProgressHelper.addProgressRequestListener(requestBody, uiProgressRequestListener))
+                .url(methodBuilder.url())
+                .tag((methodBuilder.request() == null || methodBuilder.request().tag == null) ? methodBuilder.url() : methodBuilder.request().tag)
+                .build();
     }
 
     public static String typeTag(Http.GETBuilder methodBuilder) {
