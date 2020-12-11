@@ -43,6 +43,9 @@ public class UploadManager {
                     continue;
                 }
                 info.setStatus(UploadErr.START);
+                if (listener != null){
+                    listener.onCall(null,info);
+                }
                 mActiveTasks.add(info);
                 builder.enqueueUploadFile(new File[]{info.getFile()}, new String[]{info.getFileKey()}, new RequestCallback<Bean>() {
                     @Override
