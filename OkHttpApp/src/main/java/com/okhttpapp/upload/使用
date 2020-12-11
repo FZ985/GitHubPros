@@ -1,0 +1,56 @@
+
+
+注意： 只是写了逻辑， 没有实际测试
+
+
+    //上传图片
+    public void uploadImage() {
+        String image = Environment.getExternalStorageDirectory().getAbsolutePath() + "/qq.jpg";
+
+        UploadInfo[] infos = new UploadInfo[5];
+        for (int i = 0; i < 5; i++) {
+            infos[i] = new UploadInfo(i, new File(image), "image");
+        }
+
+        String url = "http://xxxxx";
+        JRequest request = new JRequest();
+        request.tag = url;
+        UploadManager.instance()
+                .add(HttpImpl.postForm(url)
+                        .request(request), new UploadListener<String>() {
+                    @Override
+                    public void onCall(String t, UploadInfo uploadInfo) {
+                        switch (uploadInfo.getStatus()) {
+                            case UploadErr.CANCEL:
+                                System.out.println("id:" + uploadInfo.getId() + "取消了");
+                                break;
+                            case UploadErr.RUNNING:
+                                System.out.println("id：" + uploadInfo.getId() + "," + uploadInfo.getBytesWrite() + "," + uploadInfo.getContentLength() + "," + uploadInfo.isDone());
+                                break;
+                            case UploadErr.START:
+                                System.out.println("id：" + uploadInfo.getId() + "上传开始");
+                                break;
+                            case UploadErr.SUCCESS:
+                                System.out.println("id：" + uploadInfo.getId() + ",上传成功");
+                                if (t != null) {//请求成功数据
+                                    System.out.println(t.toString());
+                                }
+                                break;
+                            case UploadErr.ERROR:
+                                System.out.println("id:" + uploadInfo.getId() + "上传失败:" + uploadInfo.getMsg());
+                                break;
+                        }
+                    }
+                }, infos);
+    }
+
+
+
+
+
+
+
+    //取消上传
+    public void uploadCancel(){
+        UploadManager.instance().cancelAll("http://xxxxx");
+    }

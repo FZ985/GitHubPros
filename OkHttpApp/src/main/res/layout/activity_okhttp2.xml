@@ -68,6 +68,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:text="put、delete、head、patch等请求不在展示，方式和get、post一样" />
+
+            <TextView
+                android:id="@+id/downloadMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="" />
         </LinearLayout>
     </ScrollView>
 
