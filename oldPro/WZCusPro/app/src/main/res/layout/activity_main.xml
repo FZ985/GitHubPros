@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowTheme"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_33"
+        android:orientation="vertical">
+
+        <weiying.customlib.barlib.StatusView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.wzcuspro.app.widget.CustomToolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height" />
+    </LinearLayout>
+
+    <com.wzcuspro.app.widget.BottomBar
+        android:id="@+id/main_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottombar"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottombarColor" />
+
+    <weiying.customlib.widget.WZNoScrollViewPager
+        android:id="@+id/main_viewpager"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_bottombar"
+        android:layout_below="@id/main_toolbar"></weiying.customlib.widget.WZNoScrollViewPager>
+</RelativeLayout>
+

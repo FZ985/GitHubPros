@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CustomLib</string>
+    <string name="cube_ptr_hours_ago"> 小时前</string>
+    <string name="cube_ptr_last_update">最后更新: </string>
+    <string name="cube_ptr_minutes_ago"> 分钟前</string>
+    <string name="cube_ptr_pull_down">下拉刷新</string>
+    <string name="cube_ptr_pull_down_to_refresh">Pull Down to Refresh</string>
+    <string name="cube_ptr_refresh_complete">刷新完成</string>
+    <string name="cube_ptr_refreshing">正在刷新...</string>
+    <string name="cube_ptr_release_to_refresh">松开刷新</string>
+    <string name="cube_ptr_seconds_ago">秒之前</string>
+    <string name="base_loading">正在加载...</string>
+    <string name="base_load_failed">加载失败，点击重新加载</string>
+    <string name="base_load_end">没有更多数据</string>
+</resources>

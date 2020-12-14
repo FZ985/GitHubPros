@@ -1,0 +1,16 @@
+DownloadManager.getInstance().download(url, DownLoadFileUtil.defualtDownloadDir(this), new DownLoadObserver() {
+            @Override
+            public void onNext(DownloadInfo value) {
+                super.onNext(value);
+                downloadInfo = value;
+                tv_prompt.setText((value.getProgress() * 100 / value.getTotal()) + "%/" + SizeFormatUtil.formatSize(value.getProgress()) + "/" + SizeFormatUtil.formatSize(value.getTotal()));
+            }
+
+            @Override
+            public void onComplete() {
+                if (downloadInfo != null) {
+                    Tools.showToast(downloadInfo.getFileName() + "下载完成");
+                }
+            }
+
+        });
