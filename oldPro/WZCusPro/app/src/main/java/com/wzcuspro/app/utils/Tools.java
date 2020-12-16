@@ -32,7 +32,6 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-
 import com.wzcuspro.app.base.BaseApp;
 
 import java.io.BufferedReader;

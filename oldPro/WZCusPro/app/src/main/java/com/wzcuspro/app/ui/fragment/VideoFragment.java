@@ -2,10 +2,7 @@ package com.wzcuspro.app.ui.fragment;
 
 import android.annotation.SuppressLint;
 import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.NestedScrollView;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,15 +11,10 @@ import com.wzcuspro.R;
 import com.wzcuspro.app.adapter.MainTabsAdapter;
 import com.wzcuspro.app.base.BaseFragment;
 import com.wzcuspro.app.glide.GlideApp;
-import com.wzcuspro.app.utils.Logger;
 import com.wzcuspro.app.utils.Tools;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import weiying.customlib.app.receive.SendRecvHelper;
 
 @SuppressLint("NewApi")
 public class VideoFragment extends BaseFragment {

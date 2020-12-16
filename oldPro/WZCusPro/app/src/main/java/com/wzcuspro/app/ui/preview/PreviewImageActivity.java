@@ -15,7 +15,6 @@ import com.wzcuspro.app.base.BaseFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import weiying.customlib.barlib.BarHide;
 import weiying.customlib.barlib.ImmersionBar;
 
 public class PreviewImageActivity extends BaseActivity {

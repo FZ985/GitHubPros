@@ -2,8 +2,6 @@ package com.wzcuspro.app.glide;
 
 
 
-import static com.bumptech.glide.gifdecoder.GifDecoder.STATUS_FORMAT_ERROR;
-
 import android.util.Log;
 
 import com.bumptech.glide.gifdecoder.GifDecoder;
@@ -12,6 +10,8 @@ import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Arrays;
+
+import static com.bumptech.glide.gifdecoder.GifDecoder.STATUS_FORMAT_ERROR;
 
 /**
  * A class responsible for creating {@link com.bumptech.glide.gifdecoder.GifHeader}s from data

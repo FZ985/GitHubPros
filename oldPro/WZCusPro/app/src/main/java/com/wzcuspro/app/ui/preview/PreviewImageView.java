@@ -26,8 +26,6 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.OverScroller;
 import android.widget.Scroller;
 
-import com.wzcuspro.app.utils.Logger;
-
 
 public class PreviewImageView extends AppCompatImageView {
     private static final String DEBUG = "DEBUG";

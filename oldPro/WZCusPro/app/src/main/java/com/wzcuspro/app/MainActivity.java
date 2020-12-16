@@ -2,9 +2,6 @@ package com.wzcuspro.app;
 
 
 import android.app.Activity;
-import android.media.Image;
-import android.view.View;
-import android.widget.ImageView;
 
 import com.wzcuspro.R;
 import com.wzcuspro.app.adapter.MainTabsAdapter;
@@ -15,7 +12,6 @@ import com.wzcuspro.app.ui.fragment.DisFragment;
 import com.wzcuspro.app.ui.fragment.HomeFragment;
 import com.wzcuspro.app.ui.fragment.MineFragment;
 import com.wzcuspro.app.ui.fragment.VideoFragment;
-import com.wzcuspro.app.ui.preview.PreviewAdFragment;
 import com.wzcuspro.app.utils.Tools;
 import com.wzcuspro.app.widget.BottomBar;
 
@@ -24,7 +20,6 @@ import java.util.List;
 
 import weiying.customlib.barlib.ImmersionBar;
 import weiying.customlib.widget.WZNoScrollViewPager;
-import weiying.customlib.widget.WZViewPager;
 
 public class MainActivity extends BaseActivity implements BottomBarCallback {
     private BottomBar mBottomBar;

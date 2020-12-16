@@ -1,9 +1,7 @@
 package com.wzcuspro.app.ui.fragment;
 
-import android.support.v4.widget.NestedScrollView;
 import android.view.View;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.wzcuspro.R;
 import com.wzcuspro.app.base.BaseFragment;

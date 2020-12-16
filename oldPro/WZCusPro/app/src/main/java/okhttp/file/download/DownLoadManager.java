@@ -2,7 +2,6 @@ package okhttp.file.download;
 
 import android.text.TextUtils;
 
-
 import com.wzcuspro.app.utils.Logger;
 
 import java.io.BufferedInputStream;

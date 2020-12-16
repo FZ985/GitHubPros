@@ -1,3 +1,4 @@
+include ':Utils'
 include ':Intent2chooseimage'
 include ':DouYinVideo'
 include ':jiaozivideodemo'

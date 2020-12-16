@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.nineoldandroids.view.ViewHelper;
 import com.wzcuspro.R;
-import com.wzcuspro.app.adapter.MainTabsAdapter;
 import com.wzcuspro.app.base.BaseFragment;
 import com.wzcuspro.app.glide.GlideApp;
 import com.wzcuspro.app.utils.Logger;

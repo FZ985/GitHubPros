@@ -15,7 +15,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 
-
 import com.wzcuspro.app.callback.BaseInitCallback;
 
 import weiying.customlib.app.ActivityManager;

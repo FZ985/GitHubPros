@@ -6,15 +6,12 @@ import android.content.Context;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
-
-import weiying.customlib.dragger.ViewDragHelper;
 
 /**
  * Created by cpoopc(303727604@qq.com)
