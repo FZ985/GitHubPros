@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_with_line"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp99">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-50dp"
+            android:background="@mipmap/icon_red_detail_top" />
+
+        <ImageView
+            android:id="@+id/headred_avator"
+            android:layout_width="@dimen/dp56"
+            android:layout_height="@dimen/dp56"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/icon_default_rect_headimg" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/headred_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp14"
+        android:gravity="center"
+        android:text="快买他用户"
+        android:textColor="@color/black33"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/headred_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        android:text="@string/grab_red_envelope"
+        android:textColor="@color/black33"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/headred_open_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp25"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/headred_opened_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:text="0"
+            android:textColor="@color/black33"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/headred_miao_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp6"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_toRightOf="@id/headred_opened_tv"
+            android:gravity="top"
+            android:text="@string/trade_unit"
+            android:textColor="@color/black33"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="-8dp"
+            android:layout_marginTop="@dimen/dp31"
+            android:layout_toRightOf="@id/headred_miao_tv"
+            android:background="@mipmap/icon_red_line" />
+
+        <TextView
+            android:id="@+id/headred_stoke_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp41"
+            android:layout_toRightOf="@id/headred_miao_tv"
+            android:gravity="bottom"
+            android:text="xxx"
+            android:textColor="@color/black33"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/headred_chican_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:text="已存入持仓,立即查看"
+        android:textColor="@color/blue_007aff"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/headred_total_num_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp32"
+        android:textColor="@color/black99"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/headred_overtime_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp50"
+        android:textColor="@color/black99"
+        android:textSize="15sp"
+        android:paddingLeft="@dimen/dp12"
+        android:visibility="gone" />
+</LinearLayout>

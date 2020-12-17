@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recharge_sc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="充值"
+            android:textColor="@color/black33"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="#F7F6FC"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/recharge_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black33"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/recharge_choose_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:drawableRight="@mipmap/icon_back_right"
+                android:gravity="center_vertical|right"
+                android:paddingRight="5dp"
+                android:text="选择币种"
+                android:textColor="#A1ADB7"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.5dp"
+            android:text="链名称"
+            android:textColor="@color/black33"
+            android:textSize="13sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tab_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.5dp"
+            android:background="#F6F7FC"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/recharge_qrcode_iv"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="36dp" />
+
+            <TextView
+                android:id="@+id/recharge_save_image"
+                android:layout_width="98dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="20.5dp"
+                android:background="@drawable/shape_recharge_saveimage"
+                android:gravity="center"
+                android:text="保存二维码"
+                android:textColor="#006CF3"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:text="充币地址"
+                android:textColor="#A1ADB7"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/recharge_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginBottom="11.5dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black33"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/recharge_copy_url"
+                android:layout_width="68.5dp"
+                android:layout_height="25dp"
+                android:background="@drawable/shape_recharge_copyurl"
+                android:gravity="center"
+                android:text="复制地址"
+                android:textColor="#8C9FAF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/recharge_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="29dp"
+            android:text=""
+            android:textColor="#A1ADB7"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

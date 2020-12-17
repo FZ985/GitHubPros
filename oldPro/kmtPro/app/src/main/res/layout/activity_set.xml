@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kmtlibs.app.widget.ElasticNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/set_login_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/set_updatePwd_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@drawable/listitem_click"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:id="@+id/set_pwd_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_update_pwd"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_paySet_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@id/set_updatePwd_rl"
+                android:background="@drawable/listitem_click"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_pay_set"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_deviceManager_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@id/set_paySet_rl"
+                android:background="@drawable/listitem_click"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_device_manager"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_upInvite_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@id/set_deviceManager_rl"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_up_inviteCode"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:id="@+id/set_invite_rightIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <TextView
+                    android:id="@+id/set_inviteTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_toLeftOf="@id/set_invite_rightIv"
+                    android:textSize="@dimen/dp15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/set_rule_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@drawable/listitem_click"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_kmt_rule"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_xiyi_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@id/set_rule_rl"
+                android:background="@drawable/listitem_click"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_kmt_xieyi"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_version_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@id/set_xiyi_rl"
+                android:background="@drawable/listitem_click"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_version"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:id="@+id/set_version_rightIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <TextView
+                    android:id="@+id/set_versionTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_toLeftOf="@id/set_version_rightIv"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/dp15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_checkVersion_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@id/set_version_rl"
+                android:background="@drawable/listitem_click"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_check_version"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_clearCache_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@id/set_checkVersion_rl"
+                android:background="@drawable/listitem_click"
+                android:paddingLeft="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_clear_cache"
+                    android:textColor="@color/set_left_text"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:id="@+id/set_cache_rightIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:src="@mipmap/icon_back_right" />
+
+                <TextView
+                    android:id="@+id/set_cacheTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_toLeftOf="@id/set_cache_rightIv"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/dp15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/set_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/btn_gradient_round2_selector"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="copyright©2019-2020"
+            android:textColor="@color/black99"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="快买他版权所有"
+            android:textColor="@color/black99"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</com.kmtlibs.app.widget.ElasticNestedScrollView>

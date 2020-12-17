@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_click"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp12"
+        android:paddingRight="@dimen/dp12">
+
+        <TextView
+            android:id="@+id/bill_record_trade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left|top"
+            android:layout_gravity="top|left"
+            android:textColor="#424B72"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/bill_record_price"
+            android:layout_width="0dp"
+            android:layout_gravity="top|right"
+            android:layout_height="wrap_content"
+            android:gravity="top|right"
+            android:layout_weight="1"
+            android:textColor="#424B72"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp12"
+        android:paddingRight="@dimen/dp12">
+
+        <TextView
+            android:id="@+id/bill_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bill_record_trade"
+            android:gravity="center_vertical"
+            android:textColor="#7F8394"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/bill_record_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:textColor="#7F8394"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:layout_marginTop="@dimen/dp8"
+        android:background="@color/lineColor" />
+
+</LinearLayout>

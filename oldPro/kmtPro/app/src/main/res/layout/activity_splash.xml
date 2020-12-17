@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent">
+
+    <com.kmtlibs.immersionbar.StatusView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/splash_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/splash_time_tv"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:visibility="gone"
+        android:layout_alignTop="@id/splash_iv"
+        android:layout_alignRight="@id/splash_iv"
+        android:layout_margin="15dp"
+        android:background="@drawable/shape_splash_time"
+        android:gravity="center"
+        android:textColor="#70ffffff"
+        android:textSize="16dp" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_showimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/item_delete"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignTop="@id/item_showimg"
+            android:layout_alignRight="@id/item_showimg"
+            android:src="@mipmap/evnlate_delete"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

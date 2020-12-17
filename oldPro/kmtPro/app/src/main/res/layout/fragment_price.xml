@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f9"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/price_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <com.scwang.smart.refresh.header.MaterialHeader
+            android:id="@+id/price_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/price_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.kmtlibs.banner.Banner
+                    android:id="@+id/price_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="231dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="184dp"
+                    android:background="@drawable/bg_pricelist"
+                    android:paddingTop="26.5dp">
+
+                    <com.kmt.pro.widget.Statelayout
+                        android:id="@+id/price_statelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="350dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/price_recycle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never" />
+                    </com.kmt.pro.widget.Statelayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <com.kmtlibs.app.widget.ShadowLayout
+        android:id="@+id/price_alphatoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        app:hl_leftShow="false"
+        app:hl_rightShow="false"
+        app:hl_shadowBackColor="@color/transparent"
+        app:hl_shadowColor="#4041248E"
+        app:hl_shadowLimit="8dp"
+        app:hl_topShow="false">
+
+        <LinearLayout
+            android:id="@+id/price_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.kmtlibs.immersionbar.StatusView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/home_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:padding="6dp"
+                    android:src="@mipmap/icon_kmt_logo" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.kmtlibs.app.widget.ShadowLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.kmtlibs.immersionbar.StatusView
+            android:id="@+id/price_statusview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_marginRight="12dp"
+            android:gravity="right">
+
+            <RelativeLayout
+                android:id="@+id/prive_message_rl"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp25"
+                android:background="@drawable/radius_bigwhite">
+
+                <ImageView
+                    android:id="@+id/notify_image"
+                    android:layout_width="18dp"
+                    android:layout_height="17dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_message" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

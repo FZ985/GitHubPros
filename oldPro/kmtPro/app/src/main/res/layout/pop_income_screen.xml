@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="140.5dip"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="140.5dip"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/pop_triangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/icon_triangle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pop_triangle"
+            android:layout_marginTop="-1dp"
+            android:background="@drawable/round_2dpwhite_radius"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pop_all"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:drawableStart="@mipmap/icon_pop_all"
+                android:drawablePadding="@dimen/dp13"
+                android:gravity="center_vertical|left"
+                android:paddingStart="@dimen/dp13"
+                android:text="全部"
+                android:textColor="@color/v3_text_gray3"
+                android:textSize="15sp"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:id="@+id/pop_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:drawableStart="@mipmap/icon_pop_exchange"
+                android:drawablePadding="@dimen/dp13"
+                android:gravity="center_vertical|left"
+                android:paddingStart="@dimen/dp13"
+                android:text="GBT兑换"
+                android:textColor="@color/v3_text_gray3"
+                android:textSize="15sp"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:id="@+id/pop_trade"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:drawableStart="@mipmap/icon_pop_mmme"
+                android:drawablePadding="@dimen/dp13"
+                android:gravity="center_vertical|left"
+                android:paddingStart="@dimen/dp13"
+                android:text="名额买卖"
+                android:textColor="@color/v3_text_gray3"
+                android:textSize="15sp"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:id="@+id/pop_checkIn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:drawableStart="@mipmap/icon_pop_medh"
+                android:drawablePadding="@dimen/dp13"
+                android:gravity="center_vertical|left"
+                android:paddingStart="@dimen/dp13"
+                android:text="名额兑换"
+                android:textColor="@color/v3_text_gray3"
+                android:textSize="15sp"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:id="@+id/pop_gongixanshouyi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:drawableStart="@mipmap/icon_pop_medh"
+                android:drawablePadding="@dimen/dp13"
+                android:gravity="center_vertical|left"
+                android:paddingStart="@dimen/dp13"
+                android:text="贡献收益"
+                android:textColor="@color/v3_text_gray3"
+                android:textSize="15sp"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:id="@+id/pop_red"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:drawableStart="@mipmap/icon_pop_red"
+                android:drawablePadding="@dimen/dp13"
+                android:gravity="center_vertical|left"
+                android:paddingStart="@dimen/dp13"
+                android:text="红包"
+                android:textColor="@color/v3_text_gray3"
+                android:textSize="15sp"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

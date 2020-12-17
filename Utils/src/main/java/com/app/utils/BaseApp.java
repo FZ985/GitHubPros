@@ -1,6 +1,11 @@
 package com.app.utils;
 
+import android.Manifest;
 import android.app.Application;
+import android.content.pm.PackageManager;
+import android.widget.Toast;
+
+import androidx.core.content.ContextCompat;
 
 /**
  * Description:
@@ -15,6 +20,8 @@ public class BaseApp extends Application {
     public void onCreate() {
         super.onCreate();
         app = this;
+        boolean b = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED;
+        Toast.makeText(app, "bbb:" + b, Toast.LENGTH_SHORT).show();
     }
 
     public static BaseApp getInstance() {

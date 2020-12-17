@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/toolbar_height"
+        android:paddingRight="@dimen/toolbar_height"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp18" />
+
+    <TextView
+        android:id="@+id/toolbar_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp14"
+        android:paddingRight="@dimen/dp10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp15" />
+
+    <TextView
+        android:id="@+id/toolbar_close"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/toolbar_left"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp5"
+        android:paddingRight="@dimen/dp5"
+        android:text="关闭"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp15"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/toolbar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp15" />
+
+    <View
+        android:id="@+id/toolbar_line"
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:layout_alignParentBottom="true"
+        android:background="#e4e4e4"
+        android:visibility="gone" />
+</RelativeLayout>

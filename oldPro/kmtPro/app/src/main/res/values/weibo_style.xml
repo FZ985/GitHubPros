@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FullScreenAndNoEnterAnimStyle" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/transparent</item>
+        <item name="android:windowAnimationStyle">@style/EnterNullAnimationStyle</item>
+    </style>
+
+    <style name="Splash" parent="@style/FullScreenAndNoEnterAnimStyle">
+        <item name="android:windowBackground">@drawable/welcome_layler_drawable</item>
+    </style>
+
+    <style name="EnterNullAnimationStyle">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@anim/exit_right</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@anim/exit_left</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@anim/exit_right</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@anim/exit_left</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@anim/exit_right</item>
+    </style>
+</resources>

@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 29
+
+    // 取消掉系统对.9图片的检查
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+//        applicationId "com.lxbuytimes.kmtapp"
+        applicationId "com.kmt.pro"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 116
+        versionName "1.1.6"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            moduleName "token"          //生成的so名字
+            ldLibs "log", "z", "m"  //添加依赖库文件，因为有log打印等
+//            abiFilters "armeabi", "armeabi-v7a", "x86" //输出指定三种abi体系结构下的so库，目前可有可无。
+//            abiFilters "armeabi-v7a", "x86" //输出指定三种abi体系结构下的so库，目前可有可无。
+            abiFilters "armeabi" //输出指定三种abi体系结构下的so库，目前可有可无。
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    signingConfigs {
+        sign {
+            keyAlias 'kmt'
+            keyPassword 'kmt123'
+            storeFile file('newkmt.jks')
+            storePassword 'kmt123'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.sign
+        }
+        debug {
+            signingConfig signingConfigs.sign
+        }
+    }
+
+    //开启Java1.8 能够使用lambda表达式
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':KmtLibs')
+    implementation project(path: ':MPChartLib')
+    //butterKnife(---view绑定)
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    //卡片布局
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //lottie动画
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    //eventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //刷新
+    implementation project(path: ':SmartRefreshLayout')
+
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp15"
+            android:text="订单编号:"
+            android:textColor="@color/order_nums"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp7"
+            android:gravity="center"
+            android:textColor="@color/order_nums"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:paddingLeft="@dimen/dp7"
+            android:paddingRight="@dimen/dp15"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp15">
+
+        <ImageView
+            android:id="@+id/order_house_iv"
+            android:layout_width="99dp"
+            android:layout_height="104dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/order_weixin_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/order_house_iv"
+            android:layout_marginLeft="@dimen/dp9"
+            android:layout_toRightOf="@id/order_house_iv"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/order_nums"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/order_weixin_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_weixin_name"
+            android:layout_marginLeft="@dimen/dp9"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/order_house_iv"
+            android:textColor="@color/v3_text_gray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp51"
+        android:layout_marginTop="@dimen/dp1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="名额:"
+            android:textColor="@color/black66"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/order_total_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:paddingLeft="@dimen/dp8"
+            android:textColor="@color/black66"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/orider_cancle_delete"
+            android:layout_width="@dimen/dp78"
+            android:layout_height="@dimen/dp32"
+            android:layout_gravity="right|center"
+            android:background="@drawable/boder_solid_gray_2"
+            android:gravity="center"
+            android:textColor="@color/black66"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/orider_pay_finish_evaluate"
+            android:layout_width="@dimen/dp78"
+            android:layout_height="@dimen/dp32"
+            android:layout_gravity="right|center"
+            android:layout_marginLeft="@dimen/dp12"
+            android:background="@drawable/boder_solid_blue_2"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp10" />
+</LinearLayout>

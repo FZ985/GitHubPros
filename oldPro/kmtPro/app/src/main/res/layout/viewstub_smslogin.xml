@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginLeft="@dimen/dp15"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/select_country_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp21"
+            android:layout_gravity="center"
+            android:minWidth="@dimen/dp80">
+
+            <TextView
+                android:id="@+id/login_phone_code"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp21"
+                android:gravity="center_vertical"
+                android:text="中国 +86"
+                android:textColor="@color/black33"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="@dimen/dp5"
+                android:layout_height="@dimen/dp5"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/login_phone_code"
+                android:src="@mipmap/icon_select_country" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/px1"
+            android:layout_height="@dimen/dp20"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginRight="@dimen/dp12"
+            android:background="@color/lineColor" />
+
+        <EditText
+            android:id="@+id/ed_phone2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/phone_number"
+            android:inputType="number"
+            android:maxLength="11"
+            android:numeric="integer"
+            android:textColor="@color/black33"
+            android:textColorHint="#CCCCCC"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dp15"
+        android:background="@color/lineColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginLeft="@dimen/dp15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp80"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/smscode"
+            android:textColor="@color/black33"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/fast_login_sms_validate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp25"
+            android:layout_weight="1"
+            android:background="@null"
+            android:maxLength="6"
+            android:numeric="integer"
+            android:textColor="@color/black33"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="@dimen/px1"
+            android:layout_height="@dimen/dp20"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp12"
+            android:background="@color/lineColor" />
+
+        <TextView
+            android:id="@+id/fast_login_send_messagebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp12"
+            android:paddingRight="@dimen/dp12"
+            android:text="@string/getSmscode"
+            android:textColor="@color/black66"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

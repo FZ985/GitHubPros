@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_checkmention_bg"
+    android:orientation="vertical"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="17dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="安全验证"
+            android:textColor="@color/black22"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/dialog_mention_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="17dp"
+            android:text="取消"
+            android:textColor="#8C9CA9" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/lineColor" />
+
+    <TextView
+        android:id="@+id/dialog_mention_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/black22"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="17dp">
+
+        <EditText
+            android:id="@+id/dialog_mention_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="手机验证码"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/black22"
+            android:textColorHint="#D1D9DE"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/dialog_mention_timedown"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="17dp"
+            android:text="获取验证码"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/lineColor" />
+
+    <TextView
+        android:id="@+id/dialog_mention_commit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/selector_mention_commit"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

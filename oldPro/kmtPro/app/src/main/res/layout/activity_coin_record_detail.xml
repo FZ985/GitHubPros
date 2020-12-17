@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail_nums"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16.5dp"
+            android:paddingRight="16.5dp"
+            android:text="0"
+            android:textColor="#3688EE"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F7F6FC" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@drawable/selector_recharge_detail"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="类型"
+                android:textColor="#A1ADB7"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/black33"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@drawable/selector_recharge_detail"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="状态"
+                android:textColor="#A1ADB7"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/black33"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/url_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_recharge_detail"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/url_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="地址"
+                android:textColor="#A1ADB7"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_url"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="15dp"
+                android:paddingBottom="19dp"
+                android:text=""
+                android:textColor="@color/black33"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_shouxufei_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_recharge_detail"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="手续费"
+                android:textColor="#A1ADB7"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_shouxufei_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="15dp"
+                android:paddingBottom="19dp"
+                android:text=""
+                android:textColor="@color/black33"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_recharge_detail"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="区块链交易ID"
+                android:textColor="#A1ADB7"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_jiaoyi_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="15dp"
+                android:paddingBottom="19dp"
+                android:textColor="@color/black33"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_recharge_detail"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="时间"
+                android:textColor="#A1ADB7"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="15dp"
+                android:paddingBottom="19dp"
+                android:textColor="@color/black33"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

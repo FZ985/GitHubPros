@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_height">48dp</dimen>
+    <dimen name="login_icon_padding_bottom">22.0dip</dimen>
+    <dimen name="splash_slogan_margin_top">136.0dip</dimen>
+    <dimen name="px1">0.5dip</dimen>
+</resources>

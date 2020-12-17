@@ -1,0 +1,36 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kmtlibs">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application>
+        <activity
+            android:name="jiang.photo.picker.activity.SelectImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoActivityTheme" />
+        <activity
+            android:name="jiang.photo.picker.activity.PreviewImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoActivityTheme" />
+        <activity
+            android:name="jiang.photo.picker.activity.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoActivityTheme" />
+        <activity
+            android:name="jiang.photo.picker.activity.SelectPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoActivityTheme" />
+
+        <provider
+            android:name="jiang.photo.picker.utils.ImagePickerProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/photo_paths" />
+        </provider>
+    </application>
+</manifest>

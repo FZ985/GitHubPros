@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="153.5dp"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.kmt.pro.chart.mine.MineHorBarChart
+            android:id="@+id/mine_horchart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            android:paddingBottom="2dp">
+
+            <LinearLayout
+                android:id="@+id/shizhi_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left|bottom"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/v3_mine_circle_shizhi" />
+
+                <TextView
+                    android:id="@+id/shizhi_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:lines="1"
+                    android:text="总市值"
+                    android:textColor="#8E8EA3"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/yue_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left|bottom"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/v3_mine_circle_yue" />
+
+                <TextView
+                    android:id="@+id/yue_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:lines="1"
+                    android:text="余 额"
+                    android:textColor="#8E8EA3"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/keyong_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left|bottom"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/v3_mine_circle_keyong" />
+
+                <TextView
+                    android:id="@+id/keyong_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:lines="1"
+                    android:text="可 用"
+                    android:textColor="#8E8EA3"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/yingkui_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left|bottom"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/yingkui_v"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/v3_mine_circle_yingkui1" />
+
+                <TextView
+                    android:id="@+id/yingkui_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:lines="1"
+                    android:text="总盈亏"
+                    android:textColor="#8E8EA3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/today_yingkui_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left|bottom"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/today_yingkui_v"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/v3_mine_circle_yingkui1" />
+
+                <TextView
+                    android:id="@+id/todayyingkui_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:lines="1"
+                    android:text="日盈亏"
+                    android:textColor="#8E8EA3"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/view_zhezhao"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" />
+</RelativeLayout>

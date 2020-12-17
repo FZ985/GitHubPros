@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kmt.pro">
+    <!-- 屏幕分辨率 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 指纹 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <!-- 录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 全局 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    <!-- 获取信息有关当前或最近运行的任务 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 接收广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 通用权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许读取手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 访问相册 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 银联支付 -->
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:maxAspectRatio="2.5"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- 状态栏 刘海屏 适配start     -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.5" />
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <!-- 状态栏 刘海屏 适配end     -->
+
+        <!--  android P 的网络适配      -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!--   android 7.0以上Uri适配     -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".TstActivity">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:alwaysRetainTaskState="true"
+            android:theme="@style/Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lxbuytimes.kmtapp.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activity.detail.WaitActivity" />
+        <activity
+            android:name=".ui.activity.detail.DetailsActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activity.login.RegisterActivity" />
+        <activity
+            android:name=".ui.activity.login.CountryCodeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity android:name=".ui.activity.SettingActivity" />
+        <activity android:name=".ui.activity.BindFriendActivity" />
+        <activity android:name=".ui.activity.SetLoginPwdActivity" />
+        <activity android:name=".ui.activity.PaySetActivity" />
+        <activity android:name=".ui.activity.UpdatePayPwdActivity" />
+        <activity android:name=".ui.activity.PayPwdForgetActivity" />
+        <activity android:name=".ui.activity.SetPayPasswordActivity" />
+        <activity android:name=".ui.activity.DeviceManagerActivity" />
+        <activity
+            android:name=".ui.activity.coin.CoinListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activity.coin.RechargeCoinActivity" />
+        <activity android:name=".ui.activity.coin.CoinRecordActivity" />
+        <activity android:name=".ui.activity.coin.CoinRecordDetailActivity" />
+        <activity android:name=".ui.activity.coin.MentionMoneyActivity" />
+        <activity android:name=".ui.activity.coin.QrCodeAddressRecordActivity" />
+        <activity android:name=".ui.activity.QrCodeCameraActivity" />
+        <activity android:name=".ui.activity.AccountIncomeActivity" />
+        <activity android:name=".ui.activity.AccountIncomeDetailActivity" />
+        <activity android:name=".ui.activity.redpacket.RedPacketDetailActivity" />
+        <activity android:name=".ui.activity.redpacket.SelfRedRecordActivity" />
+        <activity android:name=".ui.activity.order.ExchangeOrderActivity" />
+        <activity android:name=".ui.activity.order.OrderDetailActivity"/>
+        <activity android:name=".ui.activity.order.ConfimOrderActivity" />
+        <activity
+            android:name=".ui.activity.order.OrderEvaluateActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activity.order.OrderEvaluateFinishActivity"/>
+        <activity android:name=".ui.activity.KeFuActivity"/>
+        <activity android:name=".ui.activity.BigPicturePreviewActivity"/>
+    </application>
+
+</manifest>

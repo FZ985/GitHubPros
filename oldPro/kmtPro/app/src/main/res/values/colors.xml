@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#41248E</color>
+    <color name="colorPrimaryDark">#41248E</color>
+    <color name="colorAccent">#41248E</color>
+    <color name="themeColor2">#5B04EE</color>
+    <color name="themeColor3">#351292</color>
+
+    <color name="window_background">#F7F7F7</color>
+    <color name="lineColor">#e5e5e5</color>
+
+    <color name="ff9500">#ff9500</color>
+    <color name="ff7d00">#FF7D00</color>
+    <color name="v3_homelist_price">#0036D4</color>
+    <color name="v3_homelist_price_down">#277732</color>
+    <color name="v3_homelist_ratio">#CE181E</color>
+
+    <!--    简介-->
+    <color name="detail_desc1">#1B1235</color>
+    <color name="detail_desc">#424B72</color>
+
+    <color name="app_base_grey_item_pressed">#2058595b</color>
+    <color name="app_base_black_text_pressed">#66151516</color>
+
+    <color name="v3_mine_line_all_start">#674EFF</color>
+    <color name="v3_mine_line_all_end">#351292</color>
+
+    <color name="v3_mine_line_yingkui_start">#FF63DE</color>
+    <color name="v3_mine_line_yingkui_end">#B122E6</color>
+    <color name="v3_mine_line_yingkui_start2">#25fbc6</color>
+    <color name="v3_mine_line_yingkui_end2">#01b185</color>
+
+    <color name="v3_mine_pie_zongchongzhi">#B122E6</color>
+    <color name="v3_mine_pie_jingchongzhi">#F5317F</color>
+    <color name="v3_mine_pie_tixian">#FFDF40</color>
+
+    <color name="v3_mine_line_yue_start">#FF7C6E</color>
+    <color name="v3_mine_line_yue_end">#F5317F</color>
+
+    <color name="v3_mine_line_canuse_start">#FFDF40</color>
+    <color name="v3_mine_line_canuse_end">#FF9C59</color>
+
+
+    <color name="v3_mine_pie_chongzhi_start">#FF63DE</color>
+    <color name="v3_mine_pie_chongzhi_end">#B727E5</color>
+
+    <color name="set_left_text">#424B72</color>
+
+    <color name="v3_text_gray">#8E8EA3</color>
+    <color name="v3_text_gray2">#8E8EA1</color>
+    <color name="v3_text_gray3">#424B72</color>
+    <color name="v3_text_black">#1B1235</color>
+    <color name="password_border">#8E8EA3</color>
+    <color name="red_ff5555">#ff5555</color>
+    <color name="yellow_ff9500">#ff9500</color>
+    <color name="blue_007aff">#007aff</color>
+    <color name="order_nums">#1B1235</color>
+</resources>

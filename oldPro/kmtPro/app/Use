@@ -1,0 +1,279 @@
+okhttp+Retrofit+Rxjava的网络请求
+
+使用:
+           ApiUrl api = RetrofitManager.getInstance().getRetrofit("http://xxx.xxxxxxx.com/").create(Api.class);
+           api.xxx(xxxx,xxxx,xxxx)
+   //                .compose(RxHelper.observableIO2Main(activity))//ui线程请求，主线程更新，并绑定了activity或fragment生命周期(activity需继承RxActivity、RxFragmentActivity、RxAppCompatActivity；fragment需继承RxFragment)
+                   .compose(RxHelper.observableIO2Main())//ui线程请求，主线程更新
+                   .subscribe(new ICall<T>() {
+                       @Override
+                       public void onResponse(T data) {
+
+                       }
+
+                       @Override
+                       public void onCallError(Throwable e) {
+
+                       }
+                   });
+
+
+
+def包下提供了默认请求管理(包含下载文件、上传、同步get与post、异步get与post、postJson、postForm)
+想用就用，不想用删掉即可
+所有默认请求都有 DefHttpManager类来管理，
+使用 DefHttpManager 类即可
+注: 使用DefHttpManager类时,方法里的url参数为 完整链接，内部会截取域名及path
+
+使用:
+
+     //接口域名
+     String url = "https://www.baidu.com/";
+     String url2 = "http://gameapi.degaopay.com/api/allApp";
+     String url3 = "http://apis.juhe.cn/ip/ipNew";//ip/ipNew?ip=112.112.11.11&key=9f703454a63103c1588a6abfec6ef91d
+
+     //同步get请求，返回Response<ResponseBody>对象
+     public void syncGet(View view) {
+         try {
+             Map<String, Object> map = new HashMap<>();
+             map.put("ip", "192.168.0.52");
+             map.put("key", "9f703454a63103c1588a6abfec6ef91d");
+             Response<ResponseBody> response = DefHttpManager.get()
+                     .loadding(DefLoad.use(this))
+                     .execute(url, new BaseRequestParams(map));
+             Logger.e("同步请求成功:" + response.body().string());
+         } catch (Exception e) {
+             Logger.e("同步请求失败:" + e.getMessage());
+         }
+     }
+
+     //同步get请求,返回自定义JavaBean, 此demo以返回String为例
+     public void syncGetObj(View view) {
+         try {
+             Map<String, Object> map = new HashMap<>();
+             map.put("ip", "192.168.0.52");
+             map.put("key", "9f703454a63103c1588a6abfec6ef91d");
+             String response = (String) DefHttpManager.get()
+                     .loadding(DefLoad.use(this))
+                     .executeObj(url3, new BaseRequestParams(map, String.class));
+             Logger.e("同步请求成功:" + response);
+ //            {"resultcode":"200","reason":"查询成功","result":{"Country":"","Province":"","City":"内网IP","Isp":"内网IP"},"error_code":0}
+         } catch (Exception e) {
+             Logger.e("同步请求失败:" + e.getMessage());
+         }
+     }
+
+     //同步post请求,返回Response<ResponseBody>对象
+     public void syncPost(View view) {
+         Map<String, Object> map = new HashMap<>();
+         map.put("ip", "192.168.0.52");
+         map.put("key", "9f703454a63103c1588a6abfec6ef91d");
+         try {
+             Response<ResponseBody> response = DefHttpManager.post()
+                     .loadding(DefLoad.use(this))
+                     .execute(url3, new BaseRequestParams(map));
+             Logger.e("同步请求成功:" + response.body().string());
+         } catch (Exception e) {
+             Logger.e("同步请求失败:" + e.getMessage());
+         }
+     }
+
+     //同步post请求,返回自定义JavaBean, 此demo以返回String为例
+     public void syncPostObj(View view) {
+         Map<String, Object> map = new HashMap<>();
+         map.put("ip", "192.168.0.52");
+         map.put("key", "9f703454a63103c1588a6abfec6ef91d");
+         try {
+             String response = (String) DefHttpManager.post()
+                     .loadding(DefLoad.use(this))
+                     .executeObj(url3, new BaseRequestParams(map, String.class));
+             Logger.e("同步请求成功:" + response);
+ //            {"resultcode":"200","reason":"查询成功","result":{"Country":"","Province":"","City":"内网IP","Isp":"内网IP"},"error_code":0}
+         } catch (Exception e) {
+             Logger.e("同步请求失败:" + e.getMessage());
+         }
+     }
+
+     //同步postJson数据,返回
+     public void syncPostJson(View view) {
+ //        {"uuid":"c29c777a-5705-064e-005a-5d479d503031","channel":"guanfang","deviceToken":"a73c217aa23c96ca4d23d4bb53e42920","os":"android","time":1571203211330,"version":"1.3.2"}
+         Map<String, Object> map = new HashMap<>();
+         map.put("uuid", "c29c777a-5705-064e-005a-5d479d503031");
+         map.put("channel", "guanfang");
+         map.put("deviceToken", "a73c217aa23c96ca4d23d4bb53e42920");
+         map.put("os", "android");
+         map.put("version", "1.3.2");
+         map.put("time", System.currentTimeMillis());
+         try {
+             Response<ResponseBody> response = DefHttpManager.post()
+                     .loadding(DefLoad.use(this))
+                     .execute(url2, new BaseRequestParams(map));
+             Logger.e("同步请求成功:" + response.body().string());
+         } catch (Exception e) {
+             Logger.e("同步请求失败:" + e.getMessage());
+         }
+     }
+
+     //同步postJson数据,返回自定义Javabean对象,此demo以String对象为例
+     public void syncPostJsonObj(View view) {
+         Map<String, Object> map = new HashMap<>();
+         map.put("uuid", "c29c777a-5705-064e-005a-5d479d503031");
+         map.put("channel", "guanfang");
+         map.put("deviceToken", "a73c217aa23c96ca4d23d4bb53e42920");
+         map.put("os", "android");
+         map.put("version", "1.3.2");
+         map.put("time", System.currentTimeMillis());
+         try {
+             String response = (String) DefHttpManager.post()
+                     .loadding(DefLoad.use(this))
+                     .executeObj(url2, new BaseRequestParams(map, String.class));
+             Logger.e("同步请求成功:" + response);
+         } catch (Exception e) {
+             Logger.e("同步请求失败:" + e.getMessage());
+         }
+     }
+
+     //异步get请求
+     public void asyncGet(View view) {
+         Map<String, Object> map = new HashMap<>();
+         map.put("ip", "192.168.0.52");
+         map.put("key", "9f703454a63103c1588a6abfec6ef91d");
+         DefHttpManager.get()
+                 .loadding(DefLoad.use(this))
+                 .enqueue(url3, new DefaultCallback<String>() {
+                     @Override
+                     public void onResponse(String data) {
+                         Logger.e("请求成功:" + data);
+                     }
+
+                     @Override
+                     public void onCallError(Throwable e) {
+                         Logger.e("请求失败:" + e.getMessage());
+                     }
+                 }, new BaseRequestParams(map));
+     }
+
+     //异步post请求
+     public void asyncPost(View view) {
+         Map<String, Object> map = new HashMap<>();
+         map.put("ip", "192.168.0.52");
+         map.put("key", "9f703454a63103c1588a6abfec6ef91d");
+         DefHttpManager.post()
+                 .loadding(DefLoad.use(this))
+                 .enqueue(url3, new DefaultCallback<String>() {
+                     @Override
+                     public void onResponse(String data) {
+                         Logger.e("请求成功:" + data);
+                     }
+
+                     @Override
+                     public void onCallError(Throwable e) {
+                         Logger.e("请求失败:" + e.getMessage());
+                     }
+                 }, new BaseRequestParams(map));
+     }
+
+     //异步postJson请求
+     public void asyncPostJson(View view) {
+         Map<String, Object> map = new HashMap<>();
+         map.put("uuid", "c29c777a-5705-064e-005a-5d479d503031");
+         map.put("channel", "guanfang");
+         map.put("deviceToken", "a73c217aa23c96ca4d23d4bb53e42920");
+         map.put("os", "android");
+         map.put("version", "1.3.2");
+         map.put("time", System.currentTimeMillis());
+         DefHttpManager.postJson()
+                 .enqueue(url2, new DefaultCallback<CommonObjResp<AllAppBean>>() {
+                     @Override
+                     public void onResponse(CommonObjResp<AllAppBean> data) {
+                         Logger.e("请求成功:" + data.err_code + "," + data.data.is_download);
+                     }
+
+                     @Override
+                     public void onCallError(Throwable e) {
+                         Logger.e("请求失败:" + e.getMessage());
+                     }
+                 }, new BaseRequestParams(map));
+     }
+
+
+     private Download download;
+
+     public void download(View view) {
+         if (!checkReadWritePermission(this)) {
+             ActivityCompat.requestPermissions(this, PERMISSIONS_READ_AND_WRITE, 200);
+             return;
+         }
+ //        String imgurl = "http://b-ssl.duitang.com/uploads/item/201411/19/20141119212339_seHfw.jpeg";
+         String apkUrl = "http://gdown.baidu.com/data/wisegame/519553e27bdccbb6/UCliulanqi_1050.apk";
+         String path = HttpUtils.obtainFilePath(this) + File.separator;
+ //        String image = "img" + System.currentTimeMillis() + ".jpg";
+         String apk = "apk12312312385469" + ".apk";
+         download = DefHttpManager.download().download(apkUrl, path, apk, new DownloadListenerImpl() {
+             @Override
+             public void update(long progress, int percent, long contentLength, boolean done) {
+                 HttpUtils.log("下载进度:" + progress + "," + percent + "," + contentLength + "," + done);
+                 RetrofitManager.getInstance().obtainHandler().post(() -> {
+                     ((Button) view).setText("" + percent);
+                 });
+             }
+
+             @Override
+             public void complete(File file) {
+                 HttpUtils.log("下载完成:" + file.getPath());
+             }
+
+             @Override
+             public void error(Throwable e) {
+                 HttpUtils.log("下载失败:" + e.getMessage());
+             }
+
+             @Override
+             public void cancel() {
+                 super.cancel();
+                 HttpUtils.log("下载取消");
+             }
+         });
+     }
+
+     public void downloadCancel(View view) {
+         if (download != null && !download.isCancel()) {
+             download.cancel();
+         }
+     }
+
+     //上传文件，可携带参数，未测试
+     public void upload(View view) {
+         HashMap<String, Object> params = new HashMap<>();
+         params.put("uid", "12390o5u94035");
+         HashMap<String, File> files = new HashMap<>();
+         files.put("fileKey", new File("xxxxx"));
+
+         DefHttpManager.upload()
+                 .enqueueUpload("暂无接口地址测试", new DefaultCallback<String>() {
+                     @Override
+                     public void onResponse(String data) {
+                         System.out.println("上传成功:" + data);
+                     }
+
+                     @Override
+                     public void onCallError(Throwable e) {
+                         System.out.println("上传失败:" + e.getMessage());
+                     }
+                 }, new BaseRequestParams(params, files), new UIProgressRequestListener() {
+                     @Override
+                     public void onUIRequestProgress(long bytesWrite, long contentLength, boolean done) {
+
+                     }
+                 });
+     }
+
+     @Override
+     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+         if (requestCode == 200) {
+             if (checkReadWritePermission(this)) {
+                 Toast.makeText(this, "permission success", Toast.LENGTH_SHORT).show();
+             }
+         }
+     }

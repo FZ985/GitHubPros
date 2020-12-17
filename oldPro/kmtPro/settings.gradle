@@ -1,0 +1,2 @@
+include ':app', ':KmtLibs', ':SmartRefreshLayout', ':MPChartLib'
+rootProject.name='kmtPro'

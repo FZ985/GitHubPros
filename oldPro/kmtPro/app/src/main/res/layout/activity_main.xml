@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp" />
+
+    <RelativeLayout
+        android:id="@+id/main_bottombar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-5dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/main_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px1"
+            android:layout_alignTop="@id/main_bottom_line"
+            android:background="@color/lineColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_weight="1" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_weight="1" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_weight="1" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_weight="1" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:id="@+id/tab_hangqing_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="行情"
+                android:textColor="#8E8EA3"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tab_maimai_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="买卖"
+                android:textColor="#8E8EA3"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tab_shop_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="商城"
+                android:textColor="#8E8EA3"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tab_invite_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="邀请"
+                android:textColor="#8E8EA3"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tab_mine_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="资产"
+                android:textColor="#8E8EA3"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

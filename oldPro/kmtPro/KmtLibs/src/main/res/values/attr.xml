@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Banner">
+        <attr name="delay_time" format="integer" />
+        <attr name="is_auto_loop" format="boolean" />
+        <attr name="is_infinite_loop" format="boolean" />
+
+        <!--RoundLinesIndicator、RectangleIndicator-->
+        <attr name="indicator_height" format="dimension"/>
+        <attr name="indicator_radius" format="dimension"/>
+
+        <!-- 以下为公用属性 -->
+        <attr name="indicator_selected_width" format="dimension"/>
+        <!--CircleIndicator-->
+        <attr name="indicator_normal_width" format="dimension"/>
+        <attr name="indicator_space" format="dimension"/>
+
+        <attr name="indicator_normal_color" format="reference|color"/>
+        <attr name="indicator_selected_color" format="reference|color"/>
+        <attr name="indicator_margin" format="dimension"/>
+        <attr name="indicator_marginLeft" format="dimension"/>
+        <attr name="indicator_marginTop" format="dimension"/>
+        <attr name="indicator_marginRight" format="dimension"/>
+        <attr name="indicator_marginBottom" format="dimension"/>
+
+        <attr name="indicator_gravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+
+        <attr name="banner_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="banner_radius" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLayout">
+        <!--阴影的圆角大小-->
+
+        <attr name="hl_cornerRadius" format="dimension" />
+        <attr name="hl_cornerRadius_leftTop" format="dimension" />
+        <attr name="hl_cornerRadius_rigthTop" format="dimension" />
+        <attr name="hl_cornerRadius_leftBottom" format="dimension" />
+        <attr name="hl_cornerRadius_rightBottom" format="dimension" />
+        <!--阴影的扩散范围(也可以理解为扩散程度)-->
+        <attr name="hl_shadowLimit" format="dimension" />
+        <attr name="hl_shadowColor" format="color" />
+        <attr name="hl_shadowBackColor" format="color" />
+        <attr name="hl_shadowBackColorClicked" format="color" />
+        <!--x轴的偏移量-->
+        <attr name="hl_dx" format="dimension" />
+        <!--y轴的偏移量-->
+        <attr name="hl_dy" format="dimension" />
+        <!--左边是否显示阴影-->
+        <attr name="hl_leftShow" format="boolean" />
+        <!--右边是否显示阴影-->
+        <attr name="hl_rightShow" format="boolean" />
+        <!--上边是否显示阴影-->
+        <attr name="hl_topShow" format="boolean" />
+        <!--下面是否显示阴影-->
+        <attr name="hl_bottomShow" format="boolean" />
+
+        <!-- 新增selector样式，是pressed叫是sectored还是2者都需要 -->
+        <attr name="hl_selectorMode">
+            <flag name="pressed" value="1" />
+            <flag name="selected" value="2" />
+        </attr>
+
+        <!--        是否要显示应用，可能有只想用shape这块，不想要阴影-->
+        <attr name="hl_isShowShadow" format="boolean" />
+
+        <!--控件区域是否对称，默认是对称。不对称的话，那么控件区域随着阴影区域走-->
+        <attr name="hl_isSym" format="boolean" />
+
+    </declare-styleable>
+</resources>

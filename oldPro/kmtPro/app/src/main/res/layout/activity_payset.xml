@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp35"
+        android:layout_marginLeft="@dimen/dp15"
+        android:gravity="left|center"
+        android:text="@string/why_account"
+        android:textColor="@color/black66"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/pwd_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:paddingLeft="@dimen/dp15"
+        android:background="@drawable/listitem_click"
+        android:drawableRight="@mipmap/icon_back_right"
+        android:gravity="left|center"
+        android:paddingRight="@dimen/dp10"
+        android:text="修改支付密码"
+        android:textColor="@color/v3_text_gray3"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:layout_marginLeft="@dimen/dp15"
+        android:background="@color/lineColor" />
+
+    <TextView
+        android:id="@+id/pwd_two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:paddingLeft="@dimen/dp15"
+        android:background="@drawable/listitem_click"
+        android:drawableRight="@mipmap/icon_back_right"
+        android:gravity="left|center"
+        android:paddingRight="@dimen/dp10"
+        android:text="忘记支付密码"
+        android:textColor="@color/v3_text_gray3"
+        android:textSize="15sp" />
+</LinearLayout>

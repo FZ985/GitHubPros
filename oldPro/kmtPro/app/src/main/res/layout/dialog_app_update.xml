@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_3dpwhite_radius"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_update" />
+
+        <TextView
+            android:id="@+id/update_versionname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="版本更新"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <com.kmt.pro.widget.MaxHeightScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:mhsv_max_height="112dp">
+
+            <TextView
+                android:id="@+id/update_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:gravity="top|left"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingBottom="@dimen/dp20"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/dp15" />
+        </com.kmt.pro.widget.MaxHeightScrollView>
+
+        <com.kmt.pro.widget.NumberProgressBar
+            android:id="@+id/update_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/update_next"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/update_boder_bg"
+                android:gravity="center"
+                android:text="@string/next"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/update_downloadapp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="#FFCC08"
+                android:gravity="center"
+                android:text="@string/now"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

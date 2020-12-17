@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/write_evaluate_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:cursorVisible="true"
+        android:gravity="top|left"
+        android:hint="写下您入住的感受吧（最多显示50字）～"
+        android:maxLength="50"
+        android:minHeight="120dp"
+        android:padding="@dimen/dp12"
+        android:textColor="@color/black66"
+        android:textSize="13sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/evaluate_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp5"
+        android:text="长按编辑照片顺序"
+        android:paddingTop="@dimen/dp2"
+        android:paddingLeft="@dimen/dp7"
+        android:paddingRight="@dimen/dp7"
+        android:textSize="@dimen/dp12"
+        android:paddingBottom="@dimen/dp2"
+        android:visibility="invisible"
+        android:background="@drawable/bg_longpressed_msg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/write_evaluate_note" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/enaluate_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp12"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/evaluate_msg" />
+
+    <Button
+        android:id="@+id/evaluate_commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp12"
+        android:layout_marginRight="@dimen/dp12"
+        android:layout_marginBottom="@dimen/dp12"
+        android:background="@drawable/btn_gradient_round2_selector"
+        android:text="发布"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/evaluate_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_ff5555"
+        android:drawableTop="@mipmap/icon_lajixiang"
+        android:drawablePadding="@dimen/dp7"
+        android:gravity="center_horizontal|top"
+        android:paddingTop="@dimen/dp12"
+        android:paddingBottom="@dimen/dp12"
+        android:text="拖动到此处删除"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp11"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/details_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/black33"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_backimg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:background="@drawable/selector_backclick" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp7"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:src="@mipmap/icon_refresh_detail" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.kmtlibs.banner.Banner
+            android:id="@+id/wait_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp230" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/wait_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wait_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50">
+
+            <TextView
+                android:id="@+id/details_buy_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/btn_gradient_round0_selector"
+                android:gravity="center"
+                android:text="@string/subscription"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/details_delist_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_alignParentBottom="true"
+                android:background="@color/lineColor"
+                android:gravity="center"
+                android:text="已退市"
+                android:textColor="@color/black66"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linear_time_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@color/ff7d00"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/name_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxWidth="175dp"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <com.kmt.pro.widget.countdownview.CountdownTextView
+                    android:id="@+id/time_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp22"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wait_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:background="@mipmap/icon_wait_title"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp20"
+            android:background="@mipmap/icon_yugao" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="12.5dp"
+                android:layout_marginRight="12.5dp"
+                android:background="@mipmap/icon_white_close" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

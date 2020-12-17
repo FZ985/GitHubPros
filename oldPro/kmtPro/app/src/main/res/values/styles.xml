@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- Base Application theme-->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowAnimationStyle">@style/common_activity_animation_translate</item>
+        <!--                <item_sign_week name="android:windowIsTranslucent">false</item_sign_week>-->
+    </style>
+
+    <style name="common_activity_animation_translate" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/new_activity_open_r2l_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/new_activity_open_l2r_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/new_activity_close_r2l_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/new_activity_close_l2r_exit</item>
+        <item name="android:taskOpenEnterAnimation">@anim/new_activity_open_r2l_enter</item>
+        <item name="android:taskOpenExitAnimation">@anim/new_activity_open_l2r_exit</item>
+        <item name="android:taskCloseEnterAnimation">@anim/new_activity_close_r2l_enter</item>
+        <item name="android:taskCloseExitAnimation">@anim/new_activity_close_l2r_exit</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/new_activity_open_r2l_enter</item>
+        <item name="android:taskToFrontExitAnimation">@anim/new_activity_open_l2r_exit</item>
+        <item name="android:taskToBackEnterAnimation">@anim/new_activity_close_r2l_enter</item>
+        <item name="android:taskToBackExitAnimation">@anim/new_activity_close_l2r_exit</item>
+    </style>
+
+    <style name="dialog_custom" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--底部弹出dialog-->
+    <style name="dialog_anim_bottom" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_enter</item>
+        <!-- 进入时的动画 -->
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_exit</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+    <style name="auto_keybroad" parent="dialog_custom">
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
+    </style>
+
+    <!-- 自定义仿IOS的ActionSheet底部Dialog的样式 ，有模糊效果 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/dialog_anim_bottom</item>
+    </style>
+
+    <style name="pop_anim_alpha" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/wechat_act_enter</item>
+        <item name="android:windowExitAnimation">@anim/wechat_act_exit</item>
+    </style>
+</resources>

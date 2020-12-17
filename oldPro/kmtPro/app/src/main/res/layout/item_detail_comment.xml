@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp10">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp10"
+        android:background="@color/window_background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/comment_head"
+            android:layout_width="@dimen/dp45"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginLeft="@dimen/dp15"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_head_img" />
+
+        <TextView
+            android:id="@+id/comment_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.5dp"
+            android:layout_toRightOf="@+id/comment_head"
+            android:gravity="center|top"
+            android:lines="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_username"
+            android:layout_marginLeft="12.5dp"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_toRightOf="@+id/comment_head"
+            android:gravity="center|top"
+            android:text=""
+            android:textColor="@color/black99"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:text=""
+        android:textColor="@color/black33"
+        android:textSize="15sp" />
+
+    <com.kmtlibs.app.widget.IGridView
+        android:id="@+id/comment_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:horizontalSpacing="2dp"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:verticalSpacing="2dp"
+        android:visibility="gone" />
+
+</LinearLayout>

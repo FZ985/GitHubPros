@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp32"
+        android:text="旧密码"
+        android:textColor="@color/v3_text_gray3"
+        android:textSize="14sp" />
+
+    <com.kmt.pro.widget.IPasswordView2
+        android:id="@+id/pay_oldpwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp16"
+        app:pwdCipherEnable="true"
+        app:pwdCursorEnable="false"
+        app:pwdLength="6"
+        app:pwdRadiusx="1dp"
+        app:pwdRadiusy="1dp"
+        app:pwdRectBorderColor="#8E8EA3"
+        app:pwdRectBorderWidth="@dimen/px1"
+        app:pwdTextBold="true" />
+
+    <LinearLayout
+        android:id="@+id/pay_newpwd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:text="新密码"
+            android:textColor="@color/v3_text_gray3"
+            android:textSize="14sp" />
+
+        <com.kmt.pro.widget.IPasswordView2
+            android:id="@+id/pay_newpwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp16"
+            app:pwdCipherEnable="true"
+            app:pwdCursorEnable="false"
+            app:pwdLength="6"
+            app:pwdRadiusx="1dp"
+            app:pwdRadiusy="1dp"
+            app:pwdRectBorderColor="#8E8EA3"
+            app:pwdRectBorderWidth="@dimen/px1"
+            app:pwdTextBold="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginRight="@dimen/dp16"
+        android:background="@drawable/v3_lb_rt_btn"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>
