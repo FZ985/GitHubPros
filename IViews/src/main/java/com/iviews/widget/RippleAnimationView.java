@@ -83,9 +83,12 @@ public class RippleAnimationView extends android.view.View {
                 isStarted = false;
             }
         };
-        mAnimatorUpdateListener = animation -> {
-            mCurrentRadius = (int) (float) animation.getAnimatedValue() + mStartRadius;
-            postInvalidate();
+        mAnimatorUpdateListener = new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mCurrentRadius = (int) (float) animation.getAnimatedValue() + mStartRadius;
+                postInvalidate();
+            }
         };
     }
 
@@ -140,6 +143,7 @@ public class RippleAnimationView extends android.view.View {
         return y;
     }
 
+    @SuppressLint("NewApi")
     @Override
     protected void onDraw(Canvas canvas) {
         int layer = canvas.saveLayer(0, 0, getWidth(), getHeight(), null);
