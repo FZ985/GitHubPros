@@ -190,7 +190,7 @@ public class OkhttpUtil {
             case Http.HEAD:
             case Http.PATCH:
                 if (methodBuilder.requestType() == Http.NO) {
-                    return getBuilder(methodBuilder, methodBuilder.request(), null).url(methodBuilder.url()).tag(methodBuilder.url()).build();
+                    return getBuilder(methodBuilder, methodBuilder.request(), null).url(methodBuilder.url()).tag((methodBuilder.request() == null || methodBuilder.request().tag == null) ? methodBuilder.url() : methodBuilder.request().tag).build();
                 } else if (methodBuilder.requestType() == Http.JSON) {
                     String json = (methodBuilder.request() != null && methodBuilder.request().requestBean != null) ? OkhttpUtil.reqParams(methodBuilder.request().requestBean) : "";
                     log("HttpApi", "#####" + typeTag(methodBuilder) + "请求:" + methodBuilder.url() + "<<请求json:" + json);
@@ -208,6 +208,8 @@ public class OkhttpUtil {
                     return getBuilder(methodBuilder, methodBuilder.request(), builder.build()).url(methodBuilder.url()).tag((methodBuilder.request() == null || methodBuilder.request().tag == null) ? methodBuilder.url() : methodBuilder.request().tag).build();
                 } else if (methodBuilder.requestType() == Http.FORM) {
                     return buildMultipartFormRequest(methodBuilder, fils, fileKeys, uiProgressRequestListener);
+                } else if (methodBuilder.requestType() == Http.BODY) {
+                    return getBuilder(methodBuilder, methodBuilder.request(), methodBuilder.requestBody()).url(methodBuilder.url()).tag((methodBuilder.request() == null || methodBuilder.request().tag == null) ? methodBuilder.url() : methodBuilder.request().tag).build();
                 }
         }
         return null;

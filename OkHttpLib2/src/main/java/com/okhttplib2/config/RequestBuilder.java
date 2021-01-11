@@ -15,6 +15,7 @@ import com.okhttplib2.upload.UIProgressRequestListener;
 import java.io.File;
 import java.lang.ref.WeakReference;
 
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
@@ -30,6 +31,7 @@ public class RequestBuilder implements Http.Builder {
     private Loadding loadding;
     private Lifecycle mLifecycleRegistry;
     private RequestImpl requestImpl;
+    private RequestBody body;
 
     public RequestBuilder(int requestWay, int requestType) {
         this.requestWay = requestWay;
@@ -51,6 +53,12 @@ public class RequestBuilder implements Http.Builder {
     @Override
     public Http.Builder request(JRequest request) {
         this.request = request;
+        return this;
+    }
+
+    @Override
+    public Http.Builder upRequestBody(RequestBody body) {
+        this.body = body;
         return this;
     }
 
@@ -89,6 +97,11 @@ public class RequestBuilder implements Http.Builder {
         @Override
         public long requestTime() {
             return startReqTime;
+        }
+
+        @Override
+        public RequestBody requestBody() {
+            return body;
         }
     }
 

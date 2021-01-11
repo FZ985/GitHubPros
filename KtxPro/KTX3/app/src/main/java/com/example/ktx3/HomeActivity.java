@@ -16,6 +16,6 @@ public class HomeActivity extends BaseActivity<ActivityMainBinding> {
 
     @Override
     public void init() {
-
+        binding.mainTv.setText("dddd");
     }
 }

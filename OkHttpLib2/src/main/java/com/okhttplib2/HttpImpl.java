@@ -29,6 +29,10 @@ public class HttpImpl {
         return new RequestBuilder(url, Http.POST, Http.FORM);
     }
 
+    public static Http.Builder postBody(String url) {
+        return new RequestBuilder(url, Http.POST, Http.BODY);
+    }
+
     public static Http.Builder putJson(String url) {
         return new RequestBuilder(url, Http.PUT, Http.JSON);
     }
@@ -39,6 +43,10 @@ public class HttpImpl {
 
     public static Http.Builder putForm(String url) {
         return new RequestBuilder(url, Http.PUT, Http.FORM);
+    }
+
+    public static Http.Builder putBody(String url) {
+        return new RequestBuilder(url, Http.PUT, Http.BODY);
     }
 
     public static Http.Builder delete(String url) {
@@ -55,6 +63,10 @@ public class HttpImpl {
 
     public static Http.Builder deleteForm(String url) {
         return new RequestBuilder(url, Http.DELETE, Http.FORM);
+    }
+
+    public static Http.Builder deleteBody(String url) {
+        return new RequestBuilder(url, Http.DELETE, Http.BODY);
     }
 
     public static Http.Builder headParams(String url) {
@@ -75,6 +87,10 @@ public class HttpImpl {
 
     public static Http.Builder patchForm(String url) {
         return new RequestBuilder(url, Http.PATCH, Http.FORM);
+    }
+
+    public static Http.Builder patchBody(String url) {
+        return new RequestBuilder(url, Http.PATCH, Http.BODY);
     }
 
     //多文件文件下载，支持断点下载

@@ -27,6 +27,8 @@ import expand.DefLoad;
 import expand.download2.AbsDownloadManager;
 import expand.download2.DownloadInfo;
 import expand.download2.DownloadManager;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
@@ -263,7 +265,26 @@ public class OkHttp2Activity extends AppCompatActivity {
     }
 
     //取消上传
-    public void uploadCancel(){
+    public void uploadCancel() {
         UploadManager.instance().cancelAll("http://xxxxx");
+    }
+
+
+    //自定义请求体
+    public void customBody() {
+        HttpImpl.postBody("http://xxxxx.xxxxx.xxxx")
+                .upRequestBody(RequestBody.create(MediaType.parse("application/json; charset=utf-8"), "dataxxxxx"))
+                .bind(this)
+                .enqueue(new RequestCallback<String>() {
+                    @Override
+                    public void onResponse(String data) {
+
+                    }
+
+                    @Override
+                    public void onError(int code, Exception e) {
+
+                    }
+                });
     }
 }

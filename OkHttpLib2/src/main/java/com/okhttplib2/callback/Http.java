@@ -14,6 +14,7 @@ import com.okhttplib2.upload.UIProgressRequestListener;
 import java.io.File;
 
 import okhttp3.OkHttpClient;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
@@ -32,6 +33,7 @@ public interface Http {
     int JSON = 1;
     int PARAMS = 2;
     int FORM = 3;
+    int BODY = 4;
 
     interface Config {
         //获取handler
@@ -87,6 +89,8 @@ public interface Http {
 
         Http.Builder load(Loadding loadding);
 
+        Http.Builder upRequestBody(RequestBody body);
+
         Http.Builder bind(Activity activity);
 
         Http.Builder bind(Fragment fragment);
@@ -108,6 +112,8 @@ public interface Http {
         Loadding load();
 
         JRequest request();
+
+        RequestBody requestBody();
 
         @NonNull
         Lifecycle getLifecycle();
