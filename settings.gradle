@@ -1,3 +1,5 @@
+include ':V2SignApkReadWrite'
+include ':Android11Compat'
 include ':Utils'
 include ':Intent2chooseimage'
 include ':DouYinVideo'
