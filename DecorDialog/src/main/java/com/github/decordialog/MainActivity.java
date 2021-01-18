@@ -1,18 +1,27 @@
 package com.github.decordialog;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.AlertDialog;
+import android.Manifest;
+import android.app.AppOpsManager;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Process;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.github.decordialog.dialog.DecorDialog;
 import com.github.decordialog.tst.TestDialog1;
+
+import java.io.File;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     RadioButton rb1, rb2, rb3;
@@ -54,6 +63,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public boolean isExternalStorageManager(@NonNull File path) {
+        Context context = this;
+        String packageName = Objects.requireNonNull(context.getPackageName());
+        int uid = context.getApplicationInfo().uid;
+
+        final AppOpsManager appOps = context.getSystemService(AppOpsManager.class);
+        final int opMode = appOps.checkOpNoThrow(AppOpsManager.OP_MANAGE_EXTERNAL_STORAGE, uid, packageName);
+
+        switch (opMode) {
+            case AppOpsManager.MODE_DEFAULT:
+                return PackageManager.PERMISSION_GRANTED == context.checkPermission(Manifest.permission.MANAGE_EXTERNAL_STORAGE, Process.myPid(), uid);
+            case AppOpsManager.MODE_ALLOWED:
+                return true;
+            case AppOpsManager.MODE_ERRORED:
+            case AppOpsManager.MODE_IGNORED:
+                return false;
+            default:
+                throw new IllegalStateException("Unknown AppOpsManager mode " + opMode);
+        }
+    }
+
 
     TestDialog1 dialog;
 
