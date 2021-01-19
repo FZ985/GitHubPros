@@ -1,4 +1,4 @@
-package apkzip.writer;
+package apkzip116.writer;
 
 import java.io.DataOutput;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.List;
 
-import apkzip.reader.ApkUtil;
+import apkzip116.reader.ApkUtil;
 
 /**
  * https://source.android.com/security/apksigning/v2.html

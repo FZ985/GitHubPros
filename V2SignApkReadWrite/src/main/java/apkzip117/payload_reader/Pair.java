@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package apkzip.reader;
+package apkzip117.payload_reader;
 
 /**
  * Pair of two elements.

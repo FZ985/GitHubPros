@@ -1,4 +1,4 @@
-package apkzip.writer;
+package apkzip116.writer;
 
 import org.json.JSONObject;
 
@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import apkzip.reader.ApkUtil;
-import apkzip.reader.ChannelReader;
-import apkzip.reader.SignatureNotFoundException;
+import apkzip116.reader.ApkUtil;
+import apkzip116.reader.ChannelReader;
+import apkzip116.reader.SignatureNotFoundException;
 
 
 public final class ChannelWriter {

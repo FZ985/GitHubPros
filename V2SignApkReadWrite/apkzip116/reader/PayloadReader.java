@@ -1,4 +1,4 @@
-package apkzip.reader;
+package apkzip116.reader;
 
 import java.io.File;
 import java.io.IOException;

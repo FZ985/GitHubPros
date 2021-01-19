@@ -1,4 +1,4 @@
-package apkzip.reader;
+package apkzip117.payload_reader;
 
 
 public class SignatureNotFoundException extends Exception {

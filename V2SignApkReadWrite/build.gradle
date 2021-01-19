@@ -29,10 +29,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfigs.sign
+            signingConfig signingConfigs.sign
         }
         debug {
-            signingConfigs.sign
+            signingConfig signingConfigs.sign
         }
     }
     compileOptions {
@@ -49,4 +49,5 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    api 'com.google.code.gson:gson:2.8.6'
 }

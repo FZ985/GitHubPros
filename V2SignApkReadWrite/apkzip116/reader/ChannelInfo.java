@@ -1,4 +1,4 @@
-package apkzip.reader;
+package apkzip116.reader;
 
 import java.util.Map;
 

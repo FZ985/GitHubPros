@@ -1,4 +1,4 @@
-package apkzip.reader;
+package apkzip116.reader;
 
 import java.io.IOException;
 import java.nio.BufferUnderflowException;
@@ -26,6 +26,7 @@ public class ApkUtil {
      (https://source.android.com/security/apksigning/v2.html#apk-signing-block)
       */
     public static final int APK_SIGNATURE_SCHEME_V2_BLOCK_ID = 0x7109871a;
+    private static final int APK_SIGNATURE_SCHEME_V3_BLOCK_ID = 0xf05368c0;
 
     // Our Channel Block ID
     public static final int APK_CHANNEL_BLOCK_ID = 0x71777777;

@@ -1,4 +1,4 @@
-package apkzip.reader;
+package apkzip117.payload_reader;
 
 import org.json.JSONException;
 import org.json.JSONObject;
