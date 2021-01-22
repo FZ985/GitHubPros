@@ -1,3 +1,6 @@
+include ':GetSignature'
+include ':ThemeCompat1'
+include ':V2sign'
 include ':V2SignApkReadWrite'
 include ':Android11Compat'
 include ':Utils'

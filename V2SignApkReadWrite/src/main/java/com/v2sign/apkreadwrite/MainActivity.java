@@ -12,8 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 
-import apkzip117.payload_reader.ChannelInfo;
-import apkzip117.payload_reader.ChannelReader;
+import apk.sign.reader.ChannelInfo;
+import apk.sign.reader.ChannelReader;
+
 
 public class MainActivity extends AppCompatActivity {
     private TextView main_tv;
@@ -53,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder builder = new StringBuilder();
         if (channelInfo != null) {
             String channel = channelInfo.getChannel();
-
             builder.append("channel:\n").append(channel).append("\n");
             if (channelInfo.getExtraInfo() != null) {
                 builder.append("额外信息:\n").append(channelInfo.getExtraInfo().toString());

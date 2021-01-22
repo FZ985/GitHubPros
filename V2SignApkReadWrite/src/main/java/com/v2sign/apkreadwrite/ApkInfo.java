@@ -7,9 +7,9 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.io.IOException;
 
-import apkzip117.payload_reader.PayloadReader;
-import apkzip117.payload_reader.SignatureNotFoundException;
-import apkzip117.payload_writer.PayloadWriter;
+import apk.sign.reader.PayloadReader;
+import apk.sign.reader.SignatureNotFoundException;
+import apk.sign.writer.PayloadWriter;
 
 
 /**

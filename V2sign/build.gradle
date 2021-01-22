@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    task releaseJar(type: Copy) {
+        //删除存在的
+        delete '../jar'
+        //设置拷贝的文件 注意studio 版本不同文件目录不同
+        from('build/intermediates/aar_main_jar/release')
+        //设置打包jar存放位置
+        into('../V2SignApkReadWrite/libs')
+        //我们只关心classes.jar这个文件
+        // 也就是from('build/intermediates/aar_main_jar/release')
+        include('classes.jar')
+        //重新命名
+        rename('classes.jar', 'v2sign.jar')
+    }
+    releaseJar.dependsOn(build)
+}
+
+dependencies {
+//    compileOnly fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.jar'], dir: 'libs')
+//    implementation 'androidx.appcompat:appcompat:1.2.0'
+}
