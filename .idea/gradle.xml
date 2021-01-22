@@ -11,8 +11,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Android11Compat" />
             <option value="$PROJECT_DIR$/DecorDialog" />
             <option value="$PROJECT_DIR$/DouYinVideo" />
+            <option value="$PROJECT_DIR$/GetSignature" />
             <option value="$PROJECT_DIR$/GooglePayTest" />
             <option value="$PROJECT_DIR$/IViews" />
             <option value="$PROJECT_DIR$/Intent2chooseimage" />
@@ -22,7 +24,10 @@
             <option value="$PROJECT_DIR$/OkHttpLib2" />
             <option value="$PROJECT_DIR$/ProgressView" />
             <option value="$PROJECT_DIR$/ScreenShotslistener" />
+            <option value="$PROJECT_DIR$/ThemeCompat1" />
             <option value="$PROJECT_DIR$/Utils" />
+            <option value="$PROJECT_DIR$/V2SignApkReadWrite" />
+            <option value="$PROJECT_DIR$/V2sign" />
             <option value="$PROJECT_DIR$/WhatsAppShareDemo" />
             <option value="$PROJECT_DIR$/jiaozivideodemo" />
             <option value="$PROJECT_DIR$/jzvdlibrary" />
