@@ -31,6 +31,7 @@
             <option value="$PROJECT_DIR$/WhatsAppShareDemo" />
             <option value="$PROJECT_DIR$/jiaozivideodemo" />
             <option value="$PROJECT_DIR$/jzvdlibrary" />
+            <option value="$PROJECT_DIR$/scalelibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

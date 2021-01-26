@@ -21,6 +21,17 @@
                 android:layout_height="wrap_content"
                 android:onClick="vpIndicator"
                 android:text="vp指示器" />
+
+            <com.totcy.salelibrary.HorizontalScaleScrollView
+                android:id="@+id/hsScale2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:MaxScale="50.0"
+                app:MinScale="1.0"
+                app:ScaleShowShortUp="false"
+                app:ScaleShowUp="true"
+                app:ScaleTextSize="12sp"
+                app:isIntegar="false" />
         </LinearLayout>
     </ScrollView>
 
