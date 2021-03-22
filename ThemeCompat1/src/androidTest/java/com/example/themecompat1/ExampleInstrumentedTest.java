@@ -1,4 +1,4 @@
-package apk.sign;
+package com.example.themecompat1;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("apk.sign.test", appContext.getPackageName());
+        assertEquals("com.example.themecompat1", appContext.getPackageName());
     }
 }
